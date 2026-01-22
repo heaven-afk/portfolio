@@ -4,79 +4,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Gaming Network - Infrastructure Project | Zion Ogadi</title>
     <meta name="description"
-        content="Nova Gaming Network - Discord Infrastructure Project. Server architecture and operational systems.">
-    <meta name="author" content="Zion Ogadi">
-    <title>Nova Gaming Network - Infrastructure | Zion Ogadi</title>
+        content="Building a Tier 1 competitive CODM BR scrims community from scratch - complete Discord infrastructure, automated onboarding, and disaster recovery systems.">
     <link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 
 <body>
-
-    <header class="nav">
-        <div class="container nav-inner">
+    <nav class="nav">
+        <div class="container">
             <a href="../../index.html" class="brand">Zion Ogadi</a>
-
-            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="nav-toggle-icon"></span>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-
-            <ul class="nav-links" id="nav-links">
-                <li><a href="../../index.html">Home</a></li>
+            <ul class="nav-links">
+                <li><a href="../../index.html#highlights">Highlights</a></li>
                 <li><a href="../../index.html#case-studies">Case Studies</a></li>
                 <li><a href="../../index.html#skills">Skills</a></li>
-                <li><a href="../../index.html#contact">Contact</a></li>
             </ul>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <article class="section">
-            <div class="container prose">
+    <main class="container prose">
+        <div style="margin-top: 3rem;">
+            <a href="../discord-revamp.html" class="btn-secondary"
+                style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; margin-bottom: 1rem;">
+                ← Back to Discord Infrastructure
+            </a>
+        </div>
 
-                <!-- Back Link -->
-                <a href="../discord-revamp.html" class="back-link">&larr; Back to Discord Infrastructure</a>
+        <div class="case-header">
+            <span class="kicker">Project Case Study</span>
+            <h1>Nova Gaming Network</h1>
+            <p class="lead">Building a Tier 1 competitive CODM BR scrims community from scratch — complete
+                infrastructure, automated systems, and disaster recovery</p>
 
-                <!-- Header -->
-                <header style="border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 2rem;">
-                    <h1 class="h1">Nova Gaming Network</h1>
-                    <p class="lead" style="margin: 0;">Discord Infrastructure & Operations</p>
-                    <p class="small" style="margin-top: 0.5rem;"><span class="badge">Coming Soon</span></p>
-                </header>
-
-                <!-- Placeholder Content -->
-                <section class="reveal">
-                    <div class="callout">
-                        <h2 style="margin-top: 0;">Project Details Coming Soon</h2>
-                        <p style="margin-bottom: 0;">
-                            This page will showcase infrastructure, automation, and server architecture work completed
-                            for Nova Gaming Network, including:
-                        </p>
-                        <ul style="margin: 1rem 0 0 0; padding-left: 1.25rem;">
-                            <li>Server structure and channel organization</li>
-                            <li>Role hierarchy and permissions system</li>
-                            <li>Bot integrations and automation workflows</li>
-                            <li>Onboarding and member management systems</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- Back Link (bottom) -->
-                <br>
-                <a href="../discord-revamp.html" class="back-link">&larr; Back to Discord Infrastructure</a>
-
+            <div class="badge-group">
+                <span class="badge">Founder</span>
+                <span class="badge">June 2024 - Present</span>
+                <span class="badge">From Scratch Build</span>
             </div>
-        </article>
+        </div>
+
+        <section>
+            <h2>Context & Challenge</h2>
+            <p>On June 11, 2024, I founded <strong>Nova Gaming Network</strong> with the goal of creating a premium
+                competitive Call of Duty Mobile Battle Royale (CODM BR) scrimmage community. The challenge was to build
+                a complete Discord ecosystem from the ground up that could:</p>
+
+            <ul>
+                <li>Support high-frequency competitive scrims with proper structure</li>
+                <li>Provide seamless onboarding for players across multiple regions</li>
+                <li>Scale to handle 1,000+ active members</li>
+                <li>Ensure operational continuity through disaster recovery systems</li>
+                <li>Establish Nova as a <strong>Tier 1 scrims destination</strong> — the top tier for competitive
+                    practice</li>
+            </ul>
+
+            <div class="callout">
+                <p><strong>Key Achievement:</strong> Nova Gaming Network successfully reached <strong>1,257
+                        members</strong> with consistently high scrims engagement and participation, establishing itself
+                    as a Tier 1 scrims community in the CODM BR competitive scene.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Infrastructure Implementation</h2>
+
+            <h3>1. Automated Onboarding System</h3>
+            <p>Implemented Discord's native Onboarding feature to create a guided member journey with customization
+                questions:</p>
+
+            <div style="margin: 2rem 0;">
+                <img src="../../assets/images/nova-onboarding.png"
+                    alt="Nova Gaming Network automated onboarding customization questions"
+                    style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Automated onboarding
+                    with event interests, gender selection, and region filtering</p>
+            </div>
+
+            <p><strong>Onboarding Flow:</strong></p>
+            <ul>
+                <li><strong>Event Interests:</strong> Scrims, Content, AF Podcast, Memes, Community News</li>
+                <li><strong>Demographics:</strong> Gender selection for inclusive community building</li>
+                <li><strong>Regional Routing:</strong> Automatic region assignment (Africa, Asia, Europe, North America,
+                    South America, Australia)</li>
+            </ul>
+
+            <div style="margin: 2rem 0;">
+                <img src="../../assets/images/nova-region-selection.png"
+                    alt="Nova Gaming Network region selection interface"
+                    style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Multi-region selection
+                    ensuring players are routed to appropriate scrims and events</p>
+            </div>
+
+            <p><strong>Impact:</strong> This automated system eliminated manual role assignment, reduced onboarding time
+                from ~5 minutes to under 60 seconds, and ensured every member was properly categorized for relevant
+                scrims notifications.</p>
+
+            <h3>2. Channel Architecture</h3>
+            <p>Designed a scalable channel structure optimized for competitive esports operations:</p>
+
+            <div style="margin: 2rem 0;">
+                <img src="../../assets/images/nova-channel-structure.png"
+                    alt="Nova Gaming Network complete channel structure"
+                    style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Organized channel
+                    categories: STAFFs, HOME, NOVA RECORDS, COMMUNITY, and SCRIMS</p>
+            </div>
+
+            <p><strong>Category Breakdown:</strong></p>
+
+            <div class="callout">
+                <p><strong>STAFFs</strong> — Internal operations workspace</p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><code>boards</code> — Strategic planning and announcements</li>
+                    <li><code>staff_chat</code>, <code>staff_workspace</code> — Day-to-day coordination</li>
+                    <li><code>staff_template</code>, <code>staff_task</code> — Workflow standardization</li>
+                    <li><code>streamer_chat</code>, <code>staff_results</code> — Content and analytics</li>
+                    <li><code>staff_meeting</code>, <code>event_meeting</code> — Voice coordination</li>
+                </ul>
+            </div>
+
+            <div class="callout">
+                <p><strong>HOME</strong> — Public-facing information hub</p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><code>rules</code> — Community guidelines</li>
+                    <li><code>welcome</code> — First touchpoint for new members</li>
+                    <li><code>faq</code> — Self-service support</li>
+                    <li><code>announcements</code> — Official updates</li>
+                    <li><code>community_update</code> — Regular status reports</li>
+                    <li><code>podcast</code>, <code>livestream</code> — Content distribution</li>
+                    <li><code>transfers</code> — Team roster changes</li>
+                </ul>
+            </div>
+
+            <div class="callout">
+                <p><strong>SCRIMS</strong> — Competitive infrastructure (primary focus)</p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><code>scrims_alerts</code> — Match notifications</li>
+                    <li><code>scrims_result</code> — Match outcomes and leaderboards</li>
+                    <li><code>scrims_faqs</code> — Ruleset and format documentation</li>
+                    <li><code>lobby_rules</code> — Match conduct guidelines</li>
+                    <li><code>scrims_host</code> — Host coordination</li>
+                    <li><code>scrims_teamslot</code> — Team registration</li>
+                    <li><code>scrims_lobbyresults</code> — Detailed match data</li>
+                </ul>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <img src="../../assets/images/nova-scrims-results.png" alt="Nova Gaming Network scrims lobby results"
+                    style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Active scrims results
+                    channel showing competitive match outcomes</p>
+            </div>
+
+            <div class="callout">
+                <p><strong>COMMUNITY</strong> — Engagement and retention</p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><code>server_update</code> — Infrastructure changes</li>
+                    <li><code>lounge</code> — General discussion</li>
+                    <li><code>memes</code> — Community culture</li>
+                    <li><code>media</code> — Content sharing</li>
+                    <li><code>ask_questions</code>, <code>create_topics</code> — Two-way communication</li>
+                    <li><code>quotes</code> — Community highlights</li>
+                </ul>
+            </div>
+
+            <div class="callout">
+                <p><strong>NOVA RECORDS</strong> — Performance tracking and archival</p>
+            </div>
+
+            <h3>3. Role Hierarchy System</h3>
+            <p>Established a comprehensive 20+ role structure covering leadership, staff, community tiers, and
+                functional roles:</p>
+
+            <div style="margin: 2rem 0;">
+                <img src="../../assets/images/nova-roles-hierarchy.png"
+                    alt="Nova Gaming Network complete role hierarchy"
+                    style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">20+ role structure
+                    from Founder to specialized positions like GFX Artist and Data Analyst</p>
+            </div>
+
+            <p><strong>Role Categories:</strong></p>
+
+            <div class="callout">
+                <p><strong>Leadership & Administration</strong></p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><span style="color: #ff00ff;">●</span> <strong>Founder</strong> — Top-level authority</li>
+                    <li><span style="color: #ffff00;">●</span> <strong>Director</strong> — Strategic leadership</li>
+                    <li><span style="color: #ff0000;">●</span> <strong>Server Admin</strong> — Infrastructure management
+                    </li>
+                    <li><span style="color: #ff0000;">●</span> <strong>Executives</strong> — Department heads</li>
+                    <li><span style="color: #ff0000;">●</span> <strong>Administration</strong> — Operational oversight
+                    </li>
+                </ul>
+            </div>
+
+            <div class="callout">
+                <p><strong>Staff Operations</strong></p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><span style="color: #a0a0a0;">●</span> <strong>Sapphire</strong> — Premium staff tier</li>
+                    <li><span style="color: #606060;">●</span> <strong>Server Mods</strong> — Community moderation</li>
+                    <li><span style="color: #0099ff;">●</span> <strong>Head Staff</strong> — Team leadership</li>
+                    <li><span style="color: #0066ff;">●</span> <strong>Scrims Host</strong> — Match coordination</li>
+                    <li><span style="color: #ff9900;">●</span> <strong>Nova Support</strong> — Member assistance</li>
+                </ul>
+            </div>
+
+            <div class="callout">
+                <p><strong>Community & Specialized Roles</strong></p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><span style="color: #00ff00;">●</span> <strong>Nova Bots</strong> — Automation systems</li>
+                    <li><span style="color: #ffff00;">●</span> <strong>VIPs</strong>, <strong>Partners</strong> —
+                        Community contributors</li>
+                    <li><span style="color: #00ff00;">●</span> <strong>Nova Staffs</strong> — General staff members</li>
+                    <li><span style="color: #ff0000;">●</span> <strong>Nova Moderator</strong> — Content moderation</li>
+                    <li><span style="color: #ff0000;">●</span> <strong>Streamer</strong> — Content creators</li>
+                    <li><span style="color: #ff00ff;">●</span> <strong>Data Analyst</strong> — Performance analytics
+                    </li>
+                    <li><span style="color: #0099ff;">●</span> <strong>Podcast Anchor</strong> — AF Podcast hosts</li>
+                    <li><span style="color: #0099ff;">●</span> <strong>GFX Artist</strong> — Visual content creation
+                    </li>
+                </ul>
+            </div>
+
+            <p><strong>Design Rationale:</strong> The role structure supports both operational needs (moderation, scrims
+                hosting) and community engagement (content creation, analytics). Color-coding provides immediate visual
+                hierarchy for members.</p>
+
+            <h3>4. Bot Ecosystem & Automation</h3>
+            <p>Deployed approximately <strong>15 bots</strong> across the server to automate critical operations:</p>
+
+            <div class="callout">
+                <p><strong>Core Bot Stack:</strong></p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><strong>Sapphire</strong> — Primary utility bot for server management</li>
+                    <li><strong>Dyno</strong> — Moderation automation and auto-moderation</li>
+                    <li><strong>Koya</strong> — Community engagement and leveling</li>
+                    <li><strong>Custom Bot (Primary)</strong> — Proprietary automation tailored to Nova's needs
+                        <ul style="margin-top: 0.25rem; margin-left: 1.5rem;">
+                            <li><em>Note: Currently developing an advanced multi-bot system as a separate project</em>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>Custom Backup Bot</strong> — Disaster recovery system
+                        <ul style="margin-top: 0.25rem; margin-left: 1.5rem;">
+                            <li>Automated backups of channel configurations</li>
+                            <li>Role structure preservation</li>
+                            <li>Rapid restoration capabilities</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <p><strong>Automation Highlights:</strong></p>
+            <ul>
+                <li><strong>Onboarding Flow:</strong> Discord native onboarding + custom role assignment via bots</li>
+                <li><strong>Scrims Management:</strong> Automated match alerts, team registration, and result posting
+                </li>
+                <li><strong>Moderation:</strong> Auto-mod rules for spam, inappropriate content, and raid protection
+                </li>
+                <li><strong>Disaster Recovery:</strong> Custom backup bot ensures operational continuity in case of
+                    malicious activity or accidental deletions</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Outcomes & Impact</h2>
+
+            <div class="callout">
+                <p><strong>Server Growth</strong></p>
+                <p style="margin-top: 0.5rem;"><strong>1,257 members</strong> — Achieved in under 8 months (June 2024 -
+                    January 2026)</p>
+            </div>
+
+            <div class="callout">
+                <p><strong>Tier 1 Status</strong></p>
+                <p style="margin-top: 0.5rem;">Nova Gaming Network established itself as a <strong>Tier 1 scrims
+                        community</strong> — the highest competitive tier for CODM BR practice matches.</p>
+            </div>
+
+            <div class="callout">
+                <p><strong>Scrims Engagement</strong></p>
+                <p style="margin-top: 0.5rem;"><strong>Consistently high participation</strong> — Regular scrims with
+                    strong team turnout and active leaderboard competition</p>
+            </div>
+
+            <div class="callout">
+                <p><strong>Operational Resilience</strong></p>
+                <p style="margin-top: 0.5rem;">Custom backup bot provides <strong>disaster recovery
+                        capabilities</strong>, protecting against data loss and ensuring rapid restoration of server
+                    infrastructure</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills Demonstrated</h2>
+            <ul>
+                <li><strong>Community Foundation:</strong> Built a thriving 1,200+ member competitive community from
+                    scratch</li>
+                <li><strong>Information Architecture:</strong> Designed scalable channel and role structures optimized
+                    for esports operations</li>
+                <li><strong>Automation Design:</strong> Implemented 15+ bot integrations with custom disaster recovery
+                    systems</li>
+                <li><strong>User Experience:</strong> Created frictionless onboarding reducing join-to-active time by
+                    80%+</li>
+                <li><strong>Competitive Operations:</strong> Established Tier 1 scrims infrastructure supporting
+                    high-frequency match coordination</li>
+                <li><strong>Risk Management:</strong> Developed backup systems ensuring operational continuity</li>
+            </ul>
+        </section>
+
+        <div style="margin: 3rem 0;">
+            <a href="../discord-revamp.html" class="btn-secondary"
+                style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+                ← Back to Discord Infrastructure
+            </a>
+        </div>
     </main>
 
     <footer class="footer">
-        <div class="container footer-content">
-            <div>
-                <strong>Zion Ogadi</strong> &copy; 2026. All rights reserved.
-            </div>
-            <div>
-                Location: Nigeria &nbsp;|&nbsp; Available for remote roles
-            </div>
+        <div class="container">
+            <p>&copy; 2024 Zion Ogadi. All rights reserved.</p>
         </div>
     </footer>
 
