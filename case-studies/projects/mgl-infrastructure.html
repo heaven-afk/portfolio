@@ -4,289 +4,530 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Major Gaming League - Infrastructure Project | Zion Ogadi</title>
     <meta name="description"
-        content="Major Gaming League - Discord Infrastructure Project. Server architecture, automation, and operational systems.">
-    <meta name="author" content="Zion Ogadi">
-    <title>Major Gaming League - Infrastructure | Zion Ogadi</title>
+        content="Complete rebuild of a CODM BR ranking server - transforming 100 members into a 3,000+ member competitive league with 172 channels, 91 roles, and advanced forum organization.">
     <link rel="stylesheet" href="../../assets/css/styles.css">
-
-    <style>
-        .chart-visual {
-            background: #f1f5f9;
-            border-radius: var(--r-sm);
-            padding: 1rem;
-            margin: 1rem 0;
-            min-height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .chart-visual img {
-            width: 100%;
-            height: auto;
-            max-height: 250px;
-            object-fit: contain;
-        }
-    </style>
 </head>
 
 <body>
-
-    <header class="nav">
-        <div class="container nav-inner">
+    <nav class="nav">
+        <div class="container">
             <a href="../../index.html" class="brand">Zion Ogadi</a>
-
-            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="nav-toggle-icon"></span>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-
-            <ul class="nav-links" id="nav-links">
-                <li><a href="../../index.html">Home</a></li>
+            <ul class="nav-links">
+                <li><a href="../../index.html#highlights">Highlights</a></li>
                 <li><a href="../../index.html#case-studies">Case Studies</a></li>
                 <li><a href="../../index.html#skills">Skills</a></li>
-                <li><a href="../../index.html#contact">Contact</a></li>
             </ul>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <article class="section">
-            <div class="container prose">
+    <main class="container prose">
+        <div style="margin-top: 3rem;">
+            <a href="../discord-revamp.html" class="btn-secondary"
+                style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; margin-bottom: 1rem;">
+                ← Back to Discord Infrastructure
+            </a>
+        </div>
 
-                <!-- Back Link -->
-                <a href="../discord-revamp.html" class="back-link">&larr; Back to Discord Infrastructure</a>
+        <div class="case-header">
+            <span class="kicker">Project Case Study</span>
+            <h1>Major Gaming League</h1>
+            <p class="lead">Complete infrastructure rebuild of a CODM BR ranking server — from 100 members to 3,000+
+                with 172 channels, 91 roles, and premium forum organization</p>
 
-                <!-- Header -->
-                <header style="border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 2rem;">
-                    <h1 class="h1">Major Gaming League</h1>
-                    <p class="lead" style="margin: 0;">Discord Infrastructure, Automation & Operations</p>
-                    <p class="small" style="margin-top: 0.5rem;">Role: Discord Server Builder & Administrator |
-                        Timeframe: Sep 2025 – Jan 2026</p>
-                </header>
-
-                <!-- Context -->
-                <section class="reveal">
-                    <h2>Context & Problem</h2>
-                    <p>
-                        Engaged to revamp the Major Gaming League Discord server to improve member experience and
-                        operational efficiency. The existing server faced challenges with unclear structure, inefficient
-                        onboarding, manual content distribution, and undefined moderator workflows.
-                    </p>
-                </section>
-
-                <!-- Actions Taken -->
-                <section class="reveal">
-                    <h2>Actions Taken</h2>
-                    <ul>
-                        <li><strong>Server Restructure:</strong> Redesigned channel organization and role hierarchy for
-                            clarity</li>
-                        <li><strong>Moderator Operations:</strong> Established clear workflows and escalation procedures
-                            for the mod team</li>
-                        <li><strong>Bot Integrations:</strong> Implemented and configured bots for moderation, welcome
-                            messages, and utility functions</li>
-                        <li><strong>Automated Onboarding:</strong> Created automated welcome sequences and role
-                            assignment flows</li>
-                        <li><strong>Content Workflows:</strong> Set up automated content distribution to relevant
-                            channels</li>
-                    </ul>
-                </section>
-
-                <hr class="hr" style="margin: 3rem 0;">
-
-                <!-- Server Structure & Information Architecture -->
-                <section class="reveal">
-                    <h2>Server Structure & Information Architecture</h2>
-                    <p style="color: var(--muted); margin-bottom: 1.5rem;">
-                        The restructured channel architecture prioritizes clarity, reduces cognitive load, and supports
-                        scalable operations. Categories are organized by function (core navigation, onboarding,
-                        news/events, support) to minimize noise and streamline moderation workflows.
-                    </p>
-
-                    <!-- Channel Screenshots -->
-                    <div style="margin-bottom: 2rem;">
-                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Channel Categories & Organization</h3>
-                        <div class="grid grid-2" style="margin-bottom: 1.5rem;">
-                            <div class="card" style="padding: 1rem;">
-                                <div class="chart-visual">
-                                    <img src="../../assets/images/mgl-channel-structure-1.png"
-                                        alt="Discord channel structure - categories view">
-                                </div>
-                                <p class="small" style="margin-top: 0.5rem; color: var(--muted-2);">
-                                    Channel categories (HOME, ONBOARDING, NEWS & EVENTS) with clear separation.
-                                    Post-implementation production structure.
-                                </p>
-                            </div>
-                            <div class="card" style="padding: 1rem;">
-                                <div class="chart-visual">
-                                    <img src="../../assets/images/mgl-channel-structure-2.png"
-                                        alt="Discord server guide and resources">
-                                </div>
-                                <p class="small" style="margin-top: 0.5rem; color: var(--muted-2);">
-                                    Server Guide integration showing resources, role descriptions, and onboarding path.
-                                    Post-implementation production structure.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="callout" style="margin-top: 1.5rem;">
-                            <h4 style="margin-top: 0; font-size: 0.95rem;">Information Architecture Principles</h4>
-                            <ul style="margin: 0.5rem 0 0 0; padding-left: 1.25rem; font-size: 0.9rem;">
-                                <li><strong>Read-only vs. Interactive Separation:</strong> Announcements and updates are
-                                    kept in read-only channels to reduce noise; interactive channels are clearly labeled
-                                    to encourage participation.</li>
-                                <li><strong>Onboarding as a Distinct Category:</strong> Dedicated ONBOARDING category
-                                    ensures new members can find server guide, welcome messages, and role assignment in
-                                    one place.</li>
-                                <li><strong>Staff-Public Boundary:</strong> Clear visual and permission-based separation
-                                    between public-facing channels and staff-only operations (moderation, support,
-                                    files).</li>
-                                <li><strong>Moderation Efficiency:</strong> Structured categories allow moderators to
-                                    quickly identify context (e.g., support tickets vs. community discussions) and apply
-                                    appropriate workflows.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Role Hierarchy -->
-                    <div style="margin-top: 2.5rem;">
-                        <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">Role Hierarchy & Permissions</h3>
-                        <div class="grid grid-2">
-                            <div class="card" style="padding: 1.5rem;">
-                                <div class="chart-visual">
-                                    <img src="../../assets/images/mgl-roles-hierarchy-staff.png"
-                                        alt="Discord staff and administrative role hierarchy">
-                                </div>
-                                <p class="small" style="margin-top: 0.5rem; color: var(--muted-2);">
-                                    Staff and administrative roles (Founder, CEO, Director, Moderation Manager,
-                                    Community Moderator, and operational bots). Post-implementation production
-                                    structure.
-                                </p>
-                            </div>
-                            <div class="card" style="padding: 1.5rem;">
-                                <div class="chart-visual">
-                                    <img src="../../assets/images/mgl-roles-hierarchy-community.png"
-                                        alt="Discord community and tier role hierarchy">
-                                </div>
-                                <p class="small" style="margin-top: 0.5rem; color: var(--muted-2);">
-                                    Community and ranked tier roles (Ranked Tier 1-4, Champion, Légende, Maitre,
-                                    Vétéran, Community). Post-implementation production structure.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <hr class="hr" style="margin: 3rem 0;">
-
-                <!-- Automated Onboarding Walkthrough -->
-                <section class="reveal">
-                    <h2>Automated Onboarding & Access Flow</h2>
-                    <p style="color: var(--muted); margin-bottom: 1.5rem;">
-                        This walkthrough demonstrates the automated onboarding experience, role assignment, and
-                        controlled channel access. The system guides new members through customization questions
-                        (promotional channels, meme preferences, game mode, region) and dynamically assigns roles to
-                        control visibility and access.
-                    </p>
-
-                    <div class="card" style="padding: 1.5rem; max-width: 900px; margin: 0 auto;">
-                        <div style="position: relative; overflow: hidden; border-radius: var(--r-sm);">
-                            <a href="../../assets/video/mgl-onboarding-walkthrough.mp4" target="_blank"
-                                style="display: block; position: relative;">
-                                <img src="../../assets/images/mgl-onboarding-thumb.png"
-                                    alt="Onboarding customization flow"
-                                    style="width: 100%; height: auto; display: block; border-radius: var(--r-sm);">
-                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-                                            background: rgba(0,0,0,0.7); border-radius: 50%; width: 64px; height: 64px; 
-                                            display: flex; align-items: center; justify-content: center;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                                        fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                        <div style="margin-top: 1rem; text-align: center;">
-                            <a href="../../assets/video/mgl-onboarding-walkthrough.mp4" class="btn-secondary"
-                                target="_blank"
-                                style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                                </svg>
-                                View Full Onboarding Walkthrough
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="callout" style="margin-top: 1.5rem;">
-                        <h4 style="margin-top: 0; font-size: 0.95rem;">Key Automation Features</h4>
-                        <ul style="margin: 0.5rem 0 0 0; padding-left: 1.25rem; font-size: 0.9rem;">
-                            <li><strong>Dynamic Role Assignment:</strong> Member responses automatically trigger role
-                                grants (e.g., region-specific roles, game mode preferences) without manual intervention.
-                            </li>
-                            <li><strong>Progressive Disclosure:</strong> Channels unlock based on completed onboarding
-                                steps, reducing initial overwhelm and guiding members through activation.</li>
-                            <li><strong>Consistent Experience:</strong> Standardized questions and flows ensure every
-                                member receives the same high-quality onboarding, regardless of join time.</li>
-                            <li><strong>Reduced Moderation Load:</strong> Automated verification and role assignment
-                                free moderators to focus on community engagement and edge cases.</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <hr class="hr" style="margin: 3rem 0;">
-
-                <!-- Outcome & Impact -->
-                <section class="reveal">
-                    <h2>Outcome & Impact</h2>
-                    <p>
-                        The revamped server delivered measurable operational improvements:
-                    </p>
-                    <ul>
-                        <li><strong>Scalable Workflows:</strong> Automation reduced manual content distribution and
-                            onboarding tasks by ~25%</li>
-                        <li><strong>Improved Member Experience:</strong> Clearer navigation and structured onboarding
-                            improved member satisfaction</li>
-                        <li><strong>Clearer Moderation Processes:</strong> Defined escalation paths and bot-assisted
-                            workflows improved team efficiency and response times</li>
-                        <li><strong>Operational Clarity:</strong> Streamlined structure supports 3,000+ members with
-                            clear roles and permissions</li>
-                    </ul>
-                </section>
-
-                <!-- Key Skills Demonstrated -->
-                <section class="reveal">
-                    <h2>Skills Demonstrated</h2>
-                    <div>
-                        <span class="badge">Discord Administration</span>
-                        <span class="badge">Automation Workflows</span>
-                        <span class="badge">Bot Integration</span>
-                        <span class="badge">Information Architecture</span>
-                        <span class="badge">Process Design</span>
-                    </div>
-                </section>
-
-                <!-- Back Link (bottom) -->
-                <br>
-                <a href="../discord-revamp.html" class="back-link">&larr; Back to Discord Infrastructure</a>
-
+            <div class="badge-group">
+                <span class="badge">Consultant</span>
+                <span class="badge">Server Admin</span>
+                <span class="badge">Data Analyst</span>
+                <span class="badge">Sept 2023 - Present</span>
             </div>
-        </article>
+        </div>
+
+        <section>
+            <h2>Context & Challenge</h2>
+            <p>In September 2023, I was brought on as Consultant, Server Admin, and Data Analyst for <strong>Major
+                    Gaming League</strong>, a Call of Duty Mobile Battle Royale ranking server. The challenge was
+                significant:</p>
+
+            <ul>
+                <li><strong>Server in baby phase:</strong> ~100 members with messy, disorganized structure</li>
+                <li><strong>Complete rebuild required:</strong> Existing channels and roles were unusable</li>
+                <li><strong>Competitive ranking focus:</strong> Need to support tiered competitive structure for CODM BR
+                </li>
+                <li><strong>Scalability requirement:</strong> Infrastructure must support exponential growth</li>
+            </ul>
+
+            <p><strong>My Approach:</strong> I made the decision to <strong>clear everything</strong> — deleted all
+                existing channels and roles to start with a clean foundation. This allowed me to architect a
+                professional, scalable infrastructure from the ground up.</p>
+
+            <div class="callout">
+                <p><strong>Key Achievement:</strong> Transformed MGL from a disorganized 100-member server into a
+                    <strong>3,024-member competitive CODM BR league</strong> with enterprise-grade organization,
+                    achieving <strong>2,924% growth</strong> over 2+ years.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Infrastructure Implementation</h2>
+
+            <h3>1. Complete Server Rebuild</h3>
+            <p>Rather than incrementally patching the existing structure, I executed a <strong>full rebuild
+                    strategy</strong>:</p>
+
+            <div class="callout">
+                <p><strong>Rebuild Process:</strong></p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><strong>Phase 1:</strong> Cleared all channels, categories, and roles</li>
+                    <li><strong>Phase 2:</strong> Designed information architecture for competitive ranking server</li>
+                    <li><strong>Phase 3:</strong> Implemented 172 channels across logical categories</li>
+                    <li><strong>Phase 4:</strong> Created 91-role hierarchy supporting staff, ranking tiers, and
+                        community</li>
+                    <li><strong>Phase 5:</strong> Deployed bot ecosystem and automation systems</li>
+                </ul>
+            </div>
+
+            <p><strong>Result:</strong> A professional Discord infrastructure capable of supporting thousands of
+                competitive players with clear navigation, automated workflows, and scalable organization.</p>
+
+            <h3>2. Server Guide & Resources</h3>
+            <p>Implemented a comprehensive Server Guide providing structured onboarding and resource access:</p>
+
+            <div style="margin: 2rem 0;">
+                <img src="../../assets/images/mgl-server-guide.png"
+                    alt="Major Gaming League Server Guide with resources and information"
+                    style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Server Guide featuring
+                    Resources section (about, staffs, roles) with professional branding and member info</p>
+            </div>
+
+            <p><strong>Server Guide Components:</strong></p>
+            <ul>
+                <li><strong>Resources:</strong> About, Staffs, Roles — providing clear server information</li>
+                <li><strong>Professional branding:</strong> Custom server logo and banner</li>
+                <li><strong>Member statistics:</strong> Real-time display of 93 online, 3,026 members (Jan 2026)</li>
+                <li><strong>Server description:</strong> "An esports organizer dedicated to Call Of Duty Mobile, hosting
+                    tournaments and managing team rankings across the African region"</li>
+            </ul>
+
+            <h3>3. Automated Onboarding System</h3>
+            <p>Created a multi-step onboarding flow to streamline new member activation and channel access:</p>
+
+            <div style="margin: 2rem 0;">
+                <img src="../../assets/images/mgl-onboarding.png"
+                    alt="Major Gaming League automated onboarding customization questions"
+                    style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Customization
+                    questions for promotional channels, memes, game mode (Battle Royal/Multiplayer), and region
+                    selection</p>
+            </div>
+
+            <p><strong>Onboarding Flow:</strong></p>
+            <ul>
+                <li><strong>Channel Access:</strong> TikTok, YouTube, Clan Promotions, Free agents</li>
+                <li><strong>Content Preferences:</strong> Memes opt-in (Yes/No)</li>
+                <li><strong>Game Mode:</strong> Battle Royal or Multiplayer focus</li>
+                <li><strong>Region Selection:</strong> Africa or Europe for tier-appropriate placement</li>
+            </ul>
+
+            <p><strong>Impact:</strong> Automated role assignment reduced manual admin work and ensured every member
+                received appropriate channel access based on their preferences and region.</p>
+
+            <h3>4. Channel Architecture (172 Channels)</h3>
+            <p>Designed a comprehensive channel structure optimized for competitive ranking operations:</p>
+
+            <div style="margin: 2rem 0;">
+                <img src="../../assets/images/mgl-channels.png" alt="Major Gaming League complete channel structure"
+                    style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Organized categories:
+                    HOME, ONBOARDING, NEWS & EVENTS with subchannel hierarchy</p>
+            </div>
+
+            <p><strong>Primary Categories:</strong></p>
+
+            <div class="callout">
+                <p><strong>HOME</strong> — Essential server navigation</p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><code>about</code> — Server introduction and purpose</li>
+                    <li><code>rules</code> — Community guidelines</li>
+                    <li><code>socials</code> — Social media links</li>
+                    <li><code>staffs</code> — Staff directory and contact</li>
+                    <li><code>roles</code> — Role explanations and assignment</li>
+                    <li><code>calendar</code> — Event scheduling</li>
+                </ul>
+            </div>
+
+            <div class="callout">
+                <p><strong>ONBOARDING</strong> — New member activation</p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><code>server_guide</code> — Navigation and getting started</li>
+                    <li><code>welcome</code> — Member greetings and introductions</li>
+                </ul>
+            </div>
+
+            <div class="callout">
+                <p><strong>NEWS & EVENTS</strong> — Communications hub</p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><code>announcement</code> — Official server announcements</li>
+                    <li><code>livestreams</code> — Stream notifications</li>
+                    <li><code>comm_update</code> — Community updates</li>
+                </ul>
+            </div>
+
+            <div class="callout">
+                <p><strong>MGL RANKING RECORDS</strong> — Competitive data</p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><code>team.rankings</code> — Team leaderboards</li>
+                    <li><code>player_killtable</code> — Player performance stats</li>
+                    <li><code>mvps</code> — Most Valuable Players showcase</li>
+                    <li><code>awards</code> — Achievement recognition</li>
+                    <li><code>hall_of_fame</code> — Historical legends</li>
+                </ul>
+            </div>
+
+            <div class="callout">
+                <p><strong>BR RANKINGS</strong> — Event organization</p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><code>announcement</code> — Event notifications</li>
+                    <li><code>results</code> — Match outcomes</li>
+                    <li><code>information</code> — Event details</li>
+                    <li><code>rules</code> — Competition guidelines</li>
+                    <li><code>casters</code> — Broadcast coordination</li>
+                    <li><code>teamslots</code> — Registration management</li>
+                    <li><code>room</code> — Match coordination</li>
+                    <li><code>lobby_results</code> — Live match tracking</li>
+                    <li><code>blacklist</code> — Banned players/teams</li>
+                    <li><code>faq</code> — Frequently asked questions</li>
+                    <li><code>complain</code> — Dispute resolution</li>
+                    <li><code>submit_recordings_tier[X]</code> — Match evidence submission (multiple tiers)</li>
+                </ul>
+            </div>
+
+            <p><strong>Additional Category Structure:</strong></p>
+            <ul>
+                <li><strong>MGL STAGE:</strong> Special event category</li>
+                <li><strong>OFF SEASON EVENT:</strong> Non-ranked competitions</li>
+                <li><strong>MGL PLAYER PROFILE:</strong> Player database</li>
+                <li><strong>REGISTRATION & ROSTER:</strong> Team management (transfers, registration, roster updates)
+                </li>
+                <li><strong>MIXED LEAGUE:</strong> Cross-tier events</li>
+                <li><strong>FPR & COMPLIANCE:</strong> Fair play and rules enforcement</li>
+                <li><strong>HANDCAM:</strong> Anti-cheat verification</li>
+                <li><strong>TEAM MANAGERS:</strong> Team captain coordination</li>
+                <li><strong>PROMOTION:</strong> Player recruitment and free agency</li>
+            </ul>
+
+            <p><strong>Total Infrastructure:</strong> 172 channels organized across 15+ categories, providing
+                comprehensive coverage for competitive operations, community engagement, and administrative workflows.
+            </p>
+
+            <h3>5. Forum Channels with Tag System (PREMIUM)</h3>
+            <p>Implemented Discord's forum channels with a sophisticated tagging system for organized team roster
+                management:</p>
+
+            <div style="margin: 2rem 0;">
+                <img src="../../assets/images/mgl-forum-channels.png"
+                    alt="Major Gaming League forum channels with tier tags"
+                    style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Forum channel showing
+                    tier-based filtering (TIER 1, TIER 2, TIER 3) for team roster posts</p>
+            </div>
+
+            <p><strong>Forum Channel Features:</strong></p>
+            <ul>
+                <li><strong>Tag-Based Organization:</strong> TIER 1, TIER 2, TIER 3 tags for competitive tier filtering
+                </li>
+                <li><strong>Structured Posts:</strong> "Legionaries" team with roster change updates</li>
+                <li><strong>Search & Filter:</strong> "Sort & view" controls for easy navigation</li>
+                <li><strong>Post Templates:</strong> Standardized format for roster updates (Player out: IGN-LGN, Call.
+                    Player in: IGN-SpiriTaLGN, Pro Name...)</li>
+                <li><strong>Post Guidelines:</strong> Right panel with "CREATING A POST" instructions including roster
+                    change format, player limitations, EU/NA player rules</li>
+            </ul>
+
+            <div class="callout">
+                <p><strong>Forum Guidelines Enforced:</strong></p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><strong>Player Limitation:</strong> Ensure roster doesn't exceed maximum of 6 players</li>
+                    <li><strong>EU/NA Limitation:</strong> Max 2 EU/NA players per roster, only 1 allowed to play in a
+                        lobby</li>
+                    <li><strong>Tag Selection:</strong> Choose appropriate tier tag based on team's competitive level
+                    </li>
+                    <li><strong>Title Format:</strong> Post title should include team name for easy identification</li>
+                </ul>
+            </div>
+
+            <p><strong>Impact:</strong> Forum channels with tags created a self-organizing system for team roster
+                management, reducing admin workload and making roster changes transparent and searchable.</p>
+
+            <h3>6. Event Showcase & Results</h3>
+            <p>Professional event presentation with branded results and team rankings:</p>
+
+            <div style="margin: 2rem 0;">
+                <img src="../../assets/images/mgl-event-showcase.png"
+                    alt="Major Gaming League Season 7 League A event results"
+                    style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">MGL S7 LEAGUE A
+                    "COLLATION" results showing Event BR Rankings (Theme: Synergy, October 27th-31st, 2025, Tier 1)</p>
+            </div>
+
+            <p><strong>Event Presentation Features:</strong></p>
+            <ul>
+                <li><strong>Professional Branding:</strong> Custom "COLLATION" event graphics with team rankings, kills,
+                    and placement</li>
+                <li><strong>Event Metadata:</strong> Clear display of event type (BR Rankings), theme (Synergy), dates,
+                    and tier</li>
+                <li><strong>Transparent Results:</strong> Public-facing results posted in dedicated channels for
+                    accountability</li>
+                <li><strong>Archival Structure:</strong> MGL SEASON 7 - COLLATION category preserves event history</li>
+            </ul>
+
+            <p><strong>Impact:</strong> Professional event presentation elevated MGL's brand credibility and provided
+                clear performance tracking for competitive teams.</p>
+
+            <h3>7. Role Hierarchy System (91 Roles)</h3>
+            <p>Designed a comprehensive 91-role structure covering leadership, staff operations, competitive tiers, and
+                community functions:</p>
+
+            <div style="margin: 2rem 0;">
+                <img src="../../assets/images/mgl-roles-staff.png" alt="Major Gaming League staff role hierarchy"
+                    style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Leadership and staff
+                    roles from Founder to specialized positions (Data Analyst, GFX Artist, Caster)</p>
+            </div>
+
+            <p><strong>Leadership & Administration (Top 12 Roles):</strong></p>
+            <div class="callout">
+                <ul style="margin-top: 0.5rem;">
+                    <li><span style="color: #ff00ff;">●</span> <strong>Founder</strong> — Ultimate authority (2 members)
+                    </li>
+                    <li><span style="color: #808080;">●</span> <strong>ProBot ✨</strong> — Premium bot integration (1
+                        member)</li>
+                    <li><span style="color: #0000ff;">●</span> <strong>CEO</strong> — Executive leadership (1 member)
+                    </li>
+                    <li><span style="color: #0099ff;">●</span> <strong>Director</strong> — Strategic oversight (1
+                        member)</li>
+                    <li><span style="color: #ff9900;">●</span> <strong>Moderation Manager</strong> — Mod team lead (3
+                        members)</li>
+                    <li><span style="color: #ff0000;">●</span> <strong>Administration Bots</strong> — Bot role (5
+                        members)</li>
+                    <li><span style="color: #ff0000;">●</span> <strong>Consultant</strong> — Advisory role (1 member)
+                    </li>
+                    <li><span style="color: #ff9900;">●</span> <strong>Server Admin</strong> — Infrastructure management
+                        (2 members)</li>
+                    <li><span style="color: #808080;">●</span> <strong>Sapphire</strong> — Premium utility bot (1
+                        member)</li>
+                    <li><span style="color: #808080;">●</span> <strong>Special Admin</strong> — Specialized duties (1
+                        member)</li>
+                    <li><span style="color: #0000ff;">●</span> <strong>Head Staff</strong> — Staff leadership (5
+                        members)</li>
+                    <li><span style="color: #ff0000;">●</span> <strong>Community Moderator</strong> — Content moderation
+                        (3 members)</li>
+                </ul>
+            </div>
+
+            <p><strong>Staff Operations & Specialized Roles:</strong></p>
+            <div class="callout">
+                <ul style="margin-top: 0.5rem;">
+                    <li><span style="color: #800080;">●</span> <strong>Staff</strong> — General staff members</li>
+                    <li><span style="color: #800080;">●</span> <strong>Ranking Moderators</strong> — Competitive tier
+                        management</li>
+                    <li><span style="color: #800080;">●</span> <strong>Trial Moderator</strong> — New moderator training
+                    </li>
+                    <li><span style="color: #800080;">●</span> <strong>FPR Team</strong> — Fair Play & Rules enforcement
+                    </li>
+                    <li><span style="color: #ff9900;">●</span> <strong>GFX Artist</strong> — Visual content creation
+                        (like the COLLATION graphics)</li>
+                    <li><span style="color: #ff9900;">●</span> <strong>Data Analyst</strong> — Performance tracking and
+                        insights</li>
+                    <li><span style="color: #ff9900;">●</span> <strong>Caster</strong> — Event broadcasting and
+                        commentary</li>
+                </ul>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <img src="../../assets/images/mgl-roles-tiers.png"
+                    alt="Major Gaming League competitive tier roles and community roles"
+                    style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Competitive tier roles
+                    (Ranked Tier 1-4, Champion through Vétéran) and community roles</p>
+            </div>
+
+            <p><strong>Competitive Tier Roles:</strong></p>
+            <div class="callout">
+                <p>MGL uses a 4-tier ranked system plus prestige tiers for competitive classification:</p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><span style="color: #0099ff;">●</span> <strong>Ranked Tier 1</strong> — Highest competitive tier
+                        (174 members)</li>
+                    <li><span style="color: #0099ff;">●</span> <strong>Ranked Tier 2</strong> — Second tier (287
+                        members)</li>
+                    <li><span style="color: #0099ff;">●</span> <strong>Ranked Tier 3</strong> — Third tier (191 members)
+                    </li>
+                    <li><span style="color: #0099ff;">●</span> <strong>Ranked Tier 4</strong> — Entry competitive tier
+                        (81 members)</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>Prestige Tiers (Above Ranked Tier 1):</strong></p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><span style="color: #ff0000;">●</span> <strong>Champion</strong> — Elite competitive status (9
+                        members)</li>
+                    <li><span style="color: #ffff00;">●</span> <strong>Légende</strong> — Legendary players (21 members)
+                    </li>
+                    <li><span style="color: #0099ff;">●</span> <strong>Maître</strong> — Master tier (41 members)</li>
+                    <li><span style="color: #008000;">●</span> <strong>Vétéran</strong> — Veteran status (80 members)
+                    </li>
+                </ul>
+            </div>
+
+            <p><strong>Community & Utility Roles:</strong></p>
+            <div class="callout">
+                <ul style="margin-top: 0.5rem;">
+                    <li><span style="color: #ff00ff;">●</span> <strong>Verified Female</strong> — Gender diversity
+                        recognition (113 members)</li>
+                    <li><span style="color: #8b4513;">●</span> <strong>Community</strong> — General members (2,944
+                        members)</li>
+                    <li><span style="color: #808080;">●</span> <strong>MGL BOT</strong> — Bot integration (2 members)
+                    </li>
+                    <li><span style="color: #008000;">●</span> <strong>fun games bot</strong> — Entertainment bot (3
+                        members)</li>
+                    <li><span style="color: #008000;">●</span> <strong>Music Bots</strong> — Audio bots (4 members)</li>
+                </ul>
+            </div>
+
+            <p><strong>Role Distribution Analysis:</strong></p>
+            <p>Of 3,026 total members (as shown in screenshots), the role breakdown demonstrates:</p>
+            <ul>
+                <li><strong>Competitive Focus:</strong> 733 members in ranked tiers (Tier 1-4) + 151 in prestige tiers =
+                    <strong>29% active competitive players</strong></li>
+                <li><strong>Small Admin Team:</strong> ~20 staff/admin roles maintaining order for 3,000+ members</li>
+                <li><strong>Community Base:</strong> 2,944 "Community" role members = general participant pool</li>
+                <li><strong>Specialized Functions:</strong> Dedicated roles for GFX, Data Analysis, Casting, and FPR
+                    create professional operational structure</li>
+            </ul>
+
+            <p><strong>Design Rationale:</strong> The 91-role system supports operational needs (moderation, event
+                management, fair play), competitive structure (4 ranked tiers + 4 prestige tiers), and community
+                engagement (verified female, regional roles). Color-coding and hierarchy provide immediate visual
+                clarity for members.</p>
+
+            <h3>8. Bot Ecosystem & Automation</h3>
+            <p>Deployed a multi-bot ecosystem to automate server operations and community engagement:</p>
+
+            <div class="callout">
+                <p><strong>Core Bot Stack:</strong></p>
+                <ul style="margin-top: 0.5rem;">
+                    <li><strong>Sapphire</strong> — Primary utility bot for server management and moderation</li>
+                    <li><strong>Koya</strong> — Community engagement and leveling system</li>
+                    <li><strong>Astro</strong> — Additional moderation and automation features</li>
+                    <li><strong>Jockie Music Bot (All Variants)</strong> — Voice channel music and entertainment
+                        <ul style="margin-top: 0.25rem; margin-left: 1.5rem;">
+                            <li>Multiple instances for high-quality audio across voice channels</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ticket Bot</strong> — Support ticket system for member assistance and dispute resolution
+                    </li>
+                    <li><strong>ProBot ✨</strong> — Premium features for advanced automation</li>
+                </ul>
+            </div>
+
+            <p><strong>Automation Highlights:</strong></p>
+            <ul>
+                <li><strong>Onboarding Flow:</strong> Automated role assignment via customization questions (region,
+                    game mode, content preferences)</li>
+                <li><strong>Ranking Management:</strong> Tier role assignment based on competitive performance</li>
+                <li><strong>Moderation:</strong> Auto-mod rules, anti-spam, raid protection via Sapphire and Astro</li>
+                <li><strong>Support System:</strong> Ticket Bot handles player disputes, roster changes, and compliance
+                    issues</li>
+                <li><strong>Engagement:</strong> Koya provides leveling and activity tracking to encourage participation
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Outcomes & Impact</h2>
+
+            <div class="callout">
+                <p><strong>Explosive Growth</strong></p>
+                <p style="margin-top: 0.5rem;"><strong>100 → 3,024 members</strong> — Achieved <strong>2,924%
+                        growth</strong> from Sept 2023 to Jan 2026 (28 months)</p>
+            </div>
+
+            <div class="callout">
+                <p><strong>Scale Achievement</strong></p>
+                <p style="margin-top: 0.5rem;"><strong>3,000+ member milestone</strong> reached in December 2025,
+                    establishing MGL as one of Africa's largest CODM BR competitive communities</p>
+            </div>
+
+            <div class="callout">
+                <p><strong>Infrastructure Complexity</strong></p>
+                <p style="margin-top: 0.5rem;"><strong>172 channels, 91 roles</strong> — Architected comprehensive
+                    infrastructure supporting competitive operations, community engagement, and administrative workflows
+                </p>
+            </div>
+
+            <div class="callout">
+                <p><strong>Acquisition Success</strong></p>
+                <p style="margin-top: 0.5rem;"><strong>80-96% of joins via branded vanity URL</strong> — Strong brand
+                    recognition drives organic growth</p>
+            </div>
+
+            <div class="callout">
+                <p><strong>Peak Engagement</strong></p>
+                <p style="margin-top: 0.5rem;"><strong>13.4% monthly communication rate</strong> (November 2025) with
+                    1,594 monthly visitors — above-average engagement for large communities</p>
+            </div>
+
+            <div class="callout">
+                <p><strong>Retention Performance</strong></p>
+                <p style="margin-top: 0.5rem;"><strong>42.7% 30-day retention</strong> (November 2025) — 398 new
+                    members, 170 retained after 1 month</p>
+            </div>
+
+            <div class="callout">
+                <p><strong>Operational Maturity</strong></p>
+                <p style="margin-top: 0.5rem;">Forum channels with tier tags, professional event showcases, and
+                    comprehensive bot ecosystem demonstrate <strong>enterprise-grade Discord management</strong></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills Demonstrated</h2>
+            <ul>
+                <li><strong>Infrastructure Transformation:</strong> Complete rebuild from disorganized 100-member server
+                    to 3,000+ member professional league</li>
+                <li><strong>Information Architecture:</strong> Designed scalable 172-channel, 91-role structure
+                    optimized for competitive esports</li>
+                <li><strong>Advanced Discord Features:</strong> Implemented forum channels with tagging system for
+                    self-organizing content</li>
+                <li><strong>Automation Design:</strong> Deployed multi-bot ecosystem (Sapphire, Koya, Astro, Jockie,
+                    Ticket Bot, ProBot) for operational efficiency</li>
+                <li><strong>Data-Driven Growth:</strong> Achieved 2,924% growth with vanity URL-led acquisition strategy
+                </li>
+                <li><strong>Community Scalability:</strong> Maintained engagement and operations through 30x member
+                    growth</li>
+                <li><strong>Competitive Operations:</strong> Built tier-based ranking system supporting 884 competitive
+                    players across 8 performance tiers</li>
+                <li><strong>Process Standardization:</strong> Created forum templates and post guidelines for roster
+                    management compliance</li>
+            </ul>
+        </section>
+
+        <div style="margin: 3rem 0;">
+            <a href="../discord-revamp.html" class="btn-secondary"
+                style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+                ← Back to Discord Infrastructure
+            </a>
+        </div>
     </main>
 
     <footer class="footer">
-        <div class="container footer-content">
-            <div>
-                <strong>Zion Ogadi</strong> &copy; 2026. All rights reserved.
-            </div>
-            <div>
-                Location: Nigeria &nbsp;|&nbsp; Available for remote roles
-            </div>
+        <div class="container">
+            <p>&copy; 2024 Zion Ogadi. All rights reserved.</p>
         </div>
     </footer>
 
