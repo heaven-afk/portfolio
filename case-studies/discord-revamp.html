@@ -378,35 +378,140 @@
                         </p>
                     </div>
 
-                    <!-- Server Structure -->
+                    <!-- Server Structure & Information Architecture -->
                     <div class="reveal" data-delay="350" style="margin-top: 3rem;">
                         <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">
-                            Server Structure & Role Hierarchy (Post-Implementation)
+                            Server Structure & Information Architecture (Post-Implementation)
                         </h3>
                         <p style="color: var(--muted); margin-bottom: 1.5rem;">
-                            Visual documentation of the production Discord structure after restructure and bot
-                            integration.
+                            The restructured channel architecture prioritizes clarity, reduces cognitive load, and
+                            supports scalable operations. Categories are organized by function (core navigation,
+                            onboarding, news/events, support) to minimize noise and streamline moderation workflows.
                         </p>
 
-                        <div class="grid grid-2">
-                            <div class="card" style="padding: 1.5rem;">
-                                <h4 style="margin-top: 0; font-size: 1rem; color: var(--text);">Channel Organization
-                                </h4>
-                                <div class="chart-visual">
-                                    <img src="../assets/images/mgl-structure-channels.png"
-                                        alt="Discord channel structure">
+                        <!-- Channel Screenshots -->
+                        <div style="margin-bottom: 2rem;">
+                            <h4 style="font-size: 1rem; color: var(--text); margin-bottom: 1rem;">Channel Categories &
+                                Organization</h4>
+                            <div class="grid grid-2" style="margin-bottom: 1.5rem;">
+                                <div class="card" style="padding: 1rem;">
+                                    <div class="chart-visual">
+                                        <img src="../assets/images/mgl-channel-structure-1.png"
+                                            alt="Discord channel structure - categories view">
+                                    </div>
+                                    <p class="small" style="margin-top: 0.5rem; color: var(--muted-2);">
+                                        Channel categories (HOME, ONBOARDING, NEWS & EVENTS) with clear separation.
+                                        Post-implementation production structure.
+                                    </p>
                                 </div>
-                                <p class="small" style="margin-top: 0.5rem;">Post-restructure production environment.
-                                    Pre-implementation visuals unavailable.</p>
-                            </div>
-                            <div class="card" style="padding: 1.5rem;">
-                                <h4 style="margin-top: 0; font-size: 1rem; color: var(--text);">Role Hierarchy</h4>
-                                <div class="chart-visual">
-                                    <img src="../assets/images/mgl-structure-roles.png" alt="Discord role hierarchy">
+                                <div class="card" style="padding: 1rem;">
+                                    <div class="chart-visual">
+                                        <img src="../assets/images/mgl-channel-structure-2.png"
+                                            alt="Discord server guide and resources">
+                                    </div>
+                                    <p class="small" style="margin-top: 0.5rem; color: var(--muted-2);">
+                                        Server Guide integration showing resources, role descriptions, and onboarding
+                                        path. Post-implementation production structure.
+                                    </p>
                                 </div>
-                                <p class="small" style="margin-top: 0.5rem;">Post-restructure production environment.
-                                    Pre-implementation visuals unavailable.</p>
                             </div>
+
+                            <div class="callout" style="margin-top: 1.5rem;">
+                                <h4 style="margin-top: 0; font-size: 0.95rem;">Information Architecture Principles</h4>
+                                <ul style="margin: 0.5rem 0 0 0; padding-left: 1.25rem; font-size: 0.9rem;">
+                                    <li><strong>Read-only vs. Interactive Separation:</strong> Announcements and updates
+                                        are kept in read-only channels to reduce noise; interactive channels are clearly
+                                        labeled to encourage participation.</li>
+                                    <li><strong>Onboarding as a Distinct Category:</strong> Dedicated ONBOARDING
+                                        category ensures new members can find server guide, welcome messages, and role
+                                        assignment in one place.</li>
+                                    <li><strong>Staff-Public Boundary:</strong> Clear visual and permission-based
+                                        separation between public-facing channels and staff-only operations (moderation,
+                                        support, files).</li>
+                                    <li><strong>Moderation Efficiency:</strong> Structured categories allow moderators
+                                        to quickly identify context (e.g., support tickets vs. community discussions)
+                                        and apply appropriate workflows.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Role Hierarchy -->
+                        <div style="margin-top: 2rem;">
+                            <h4 style="font-size: 1rem; color: var(--text); margin-bottom: 1rem;">Role Hierarchy &
+                                Permissions</h4>
+                            <div class="card" style="padding: 1.5rem;">
+                                <div class="chart-visual">
+                                    <img src="../assets/images/mgl-roles-hierarchy.png"
+                                        alt="Discord role hierarchy and staff applications">
+                                </div>
+                                <p class="small" style="margin-top: 0.5rem; color: var(--muted-2);">
+                                    Staff application system showing role definitions (Ranking Moderator, Data Analyst,
+                                    GFX Artist, Caster, Meme Lord). Post-implementation production structure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Automated Onboarding Walkthrough -->
+                    <div class="reveal" data-delay="400" style="margin-top: 3rem;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">
+                            Automated Onboarding & Access Flow
+                        </h3>
+                        <p style="color: var(--muted); margin-bottom: 1.5rem;">
+                            This walkthrough demonstrates the automated onboarding experience, role assignment, and
+                            controlled channel access used in the Major Gaming League Discord. The system guides new
+                            members through customization questions (promotional channels, meme preferences, game mode,
+                            region) and dynamically assigns roles to control visibility and access.
+                        </p>
+
+                        <div class="card" style="padding: 1.5rem; max-width: 900px; margin: 0 auto;">
+                            <div style="position: relative; overflow: hidden; border-radius: var(--r-sm);">
+                                <a href="../assets/video/mgl-onboarding-walkthrough.mp4" target="_blank"
+                                    style="display: block; position: relative;">
+                                    <img src="../assets/images/mgl-onboarding-thumb.png"
+                                        alt="Onboarding customization flow"
+                                        style="width: 100%; height: auto; display: block; border-radius: var(--r-sm);">
+                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                                                background: rgba(0,0,0,0.7); border-radius: 50%; width: 64px; height: 64px; 
+                                                display: flex; align-items: center; justify-content: center;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div style="margin-top: 1rem; text-align: center;">
+                                <a href="../assets/video/mgl-onboarding-walkthrough.mp4" class="btn-secondary"
+                                    target="_blank"
+                                    style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                    </svg>
+                                    View Full Onboarding Walkthrough
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="callout" style="margin-top: 1.5rem;">
+                            <h4 style="margin-top: 0; font-size: 0.95rem;">Key Automation Features</h4>
+                            <ul style="margin: 0.5rem 0 0 0; padding-left: 1.25rem; font-size: 0.9rem;">
+                                <li><strong>Dynamic Role Assignment:</strong> Member responses automatically trigger
+                                    role grants (e.g., region-specific roles, game mode preferences) without manual
+                                    intervention.</li>
+                                <li><strong>Progressive Disclosure:</strong> Channels unlock based on completed
+                                    onboarding steps, reducing initial overwhelm and guiding members through activation.
+                                </li>
+                                <li><strong>Consistent Experience:</strong> Standardized questions and flows ensure
+                                    every member receives the same high-quality onboarding, regardless of join time.
+                                </li>
+                                <li><strong>Reduced Moderation Load:</strong> Automated verification and role assignment
+                                    free moderators to focus on community engagement and edge cases.</li>
+                            </ul>
                         </div>
                     </div>
 
