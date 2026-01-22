@@ -5,10 +5,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Case Study: Community Scaling & Retention at Onward Gaming Republic - Building engagement and growth strategies for 5,000+ members.">
+        content="Case Study: Community Service & Retention. Data-driven growth strategies and engagement optimization across gaming communities.">
     <meta name="author" content="Zion Ogadi">
-    <title>Community Scaling & Retention | Zion Ogadi</title>
+    <title>Community Service & Retention | Zion Ogadi</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <style>
+        .evidence-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        @media (min-width: 900px) {
+            .evidence-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .evidence-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--r-md);
+            padding: 1.5rem;
+            transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+        }
+
+        .evidence-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .evidence-label {
+            display: inline-block;
+            background: var(--accent-soft);
+            color: var(--accent-2);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            font-size: var(--fs-xs);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .chart-visual {
+            background: #f1f5f9;
+            border-radius: var(--r-sm);
+            padding: 1rem;
+            margin: 1rem 0;
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .chart-visual img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: contain;
+        }
+
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: var(--fs-sm);
+        }
+
+        .metric-row:last-child {
+            border-bottom: none;
+        }
+
+        .metric-label {
+            color: var(--muted);
+        }
+
+        .metric-value {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .interpretation {
+            background: #fefce8;
+            border-left: 3px solid #eab308;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: var(--r-sm);
+            font-size: var(--fs-sm);
+            color: var(--muted);
+        }
+
+        .interpretation strong {
+            color: var(--text);
+        }
+
+        .project-section {
+            border-left: 3px solid var(--accent);
+            padding-left: 1.5rem;
+            margin: 3rem 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,91 +141,316 @@
 
                 <!-- Header -->
                 <header style="border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 2rem;">
-                    <h1 class="h1">Community Scaling & Retention</h1>
-                    <p class="lead" style="margin: 0;">Onward Gaming Republic | Community Manager</p>
+                    <h1 class="h1">Community Service & Retention</h1>
+                    <p class="lead" style="margin: 0;">Data-Driven Growth Strategies and Engagement Optimization</p>
                 </header>
 
-                <!-- Context -->
-                <section>
-                    <h2>Context</h2>
+                <!-- Overview -->
+                <section class="reveal">
+                    <h2>Overview</h2>
                     <p>
-                        Served as Community Manager for Onward Gaming Republic, a gaming community
-                        with over 5,000 members. Responsible for overall community health, engagement
-                        strategies, and member retention.
+                        This case study demonstrates community analytics, engagement optimization, and retention
+                        strategies across multiple gaming communities. Work includes data-informed decision making,
+                        growth tracking, and scalable community operations.
                     </p>
                 </section>
 
-                <!-- Problem -->
-                <section>
-                    <h2>Problem</h2>
-                    <p>The community required attention in several key areas:</p>
-                    <ul>
-                        <li>Increase overall participation and daily active engagement</li>
-                        <li>Improve member retention over time</li>
-                        <li>Manage disputes fairly and consistently</li>
-                        <li>Scale operations while maintaining community quality</li>
-                    </ul>
-                </section>
+                <hr class="hr" style="margin: 3rem 0;">
 
-                <!-- Actions Taken -->
-                <section>
-                    <h2>Actions Taken</h2>
-                    <ul>
-                        <li><strong>Moderation Framework:</strong> Implemented consistent moderation policies and
-                            trained the mod team</li>
-                        <li><strong>Community Initiatives:</strong> Organized tournaments, events, and content
-                            creation opportunities</li>
-                        <li><strong>Retention Strategies:</strong> Developed member engagement programs and
-                            recognition systems</li>
-                        <li><strong>Dispute Resolution:</strong> Established fair and transparent processes for
-                            handling conflicts</li>
-                        <li><strong>Stakeholder Communication:</strong> Regular reporting to leadership on community
-                            health metrics</li>
-                    </ul>
-                </section>
+                <!-- ============================================
+                     PROJECT 1: MAJOR GAMING LEAGUE
+                     ============================================ -->
+                <section class="project-section reveal">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <h2 style="margin: 0;">Major Gaming League</h2>
+                        <span class="badge">Analytics & Insights</span>
+                    </div>
+                    <p style="color: var(--muted); margin-bottom: 2rem;">
+                        Role: Discord Server Builder & Administrator | Timeframe: Sep 2025 – Jan 2026
+                    </p>
 
-                <!-- Data & Metrics -->
-                <section>
-                    <h2>Data & Metrics</h2>
-                    <div class="callout">
-                        <ul style="list-style: none; padding: 0;">
-                            <li
-                                style="margin-bottom: 1rem; border-bottom: 1px solid var(--accent-border); padding-bottom: 0.5rem;">
-                                <strong style="color: var(--accent); font-size: 1.25rem;">30% increase</strong><br>
-                                <span class="small">in community participation</span>
-                            </li>
-                            <li
-                                style="margin-bottom: 1rem; border-bottom: 1px solid var(--accent-border); padding-bottom: 0.5rem;">
-                                <strong style="color: var(--accent); font-size: 1.25rem;">15% increase</strong><br>
-                                <span class="small">year-over-year in active members</span>
-                            </li>
-                            <li>
-                                <strong style="color: var(--accent); font-size: 1.25rem;">5,000+ members</strong><br>
-                                <span class="small">managed across community operations</span>
-                            </li>
+                    <!-- Context & Problem -->
+                    <h3>Context & Approach</h3>
+                    <p>
+                        Leveraged Discord's native analytics to track community health, identify growth patterns, and
+                        inform operational decisions for a 3,000+ member esports community. Focus on converting
+                        acquisition data into actionable retention strategies.
+                    </p>
+
+                    <!-- Server Growth & Acquisition -->
+                    <div class="evidence-grid" style="margin-top: 2.5rem;">
+
+                        <div class="evidence-card reveal" data-delay="100">
+                            <div class="evidence-label">Server Growth</div>
+                            <h4 style="margin-top: 0.5rem; font-size: 1.1rem;">Membership Trajectory</h4>
+
+                            <div class="chart-visual">
+                                <img src="../assets/images/mgl-membership.png" alt="Membership growth chart">
+                            </div>
+
+                            <div class="metric-row">
+                                <span class="metric-label">Start (Sep 24, 2025):</span>
+                                <span class="metric-value">2,379</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">End (Jan 14, 2026):</span>
+                                <span class="metric-value">2,995</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Net Change:</span>
+                                <span class="metric-value">+616 (+25.9%)</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Peak (Jan 2, 2026):</span>
+                                <span class="metric-value">3,008</span>
+                            </div>
+
+                            <div class="interpretation">
+                                <strong>Interpretation:</strong> Consistent 25% growth over 4 months confirms positive
+                                operational health. Spike periods indicate successful promotional events or content
+                                releases.
+                            </div>
+                        </div>
+
+                        <div class="evidence-card reveal" data-delay="150">
+                            <div class="evidence-label">Acquisition</div>
+                            <h4 style="margin-top: 0.5rem; font-size: 1.1rem;">Source Attribution</h4>
+
+                            <div class="chart-visual">
+                                <img src="../assets/images/mgl-joins-source.png" alt="Join source distribution chart">
+                            </div>
+
+                            <div class="metric-row">
+                                <span class="metric-label">Vanity URL (Oct 15):</span>
+                                <span class="metric-value">~80.4%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Vanity URL (Nov 14):</span>
+                                <span class="metric-value">~96.3%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Vanity URL (Dec 14):</span>
+                                <span class="metric-value">~94.8%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Vanity URL (Jan 13):</span>
+                                <span class="metric-value">~89.0%</span>
+                            </div>
+
+                            <div class="interpretation">
+                                <strong>Interpretation:</strong> Strong brand recognition with 80-96% of joins via
+                                custom vanity URL. Indicates marketing effectiveness but highlights concentration risk
+                                if the vanity URL is compromised.
+                            </div>
+                        </div>
+
+                        <div class="evidence-card reveal" data-delay="200">
+                            <div class="evidence-label">Engagement</div>
+                            <h4 style="margin-top: 0.5rem; font-size: 1.1rem;">Activation & Signals</h4>
+
+                            <div class="chart-visual">
+                                <img src="../assets/images/mgl-activation.png" alt="Activation and engagement chart">
+                            </div>
+
+                            <div class="metric-row">
+                                <span class="metric-label">New Members Opening Channels:</span>
+                                <span class="metric-value">22-39%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">New Members Communicating:</span>
+                                <span class="metric-value">2-8%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Peak Messages (Nov 14):</span>
+                                <span class="metric-value">10,536</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Peak Voice Minutes (Nov 14):</span>
+                                <span class="metric-value">1,523</span>
+                            </div>
+
+                            <div class="interpretation">
+                                <strong>Interpretation:</strong> High channel-opening rate (40%) vs. low first-message
+                                rate (8%) suggests onboarding friction. Members explore but hesitate to engage
+                                initially—supports automation improvements.
+                            </div>
+                        </div>
+
+                        <div class="evidence-card reveal" data-delay="250">
+                            <div class="evidence-label">Retention</div>
+                            <h4 style="margin-top: 0.5rem; font-size: 1.1rem;">Churn Analysis</h4>
+
+                            <div class="chart-visual">
+                                <img src="../assets/images/mgl-leavers-tenure.png" alt="Leavers by tenure chart">
+                            </div>
+
+                            <div class="metric-row">
+                                <span class="metric-label">Retention Range:</span>
+                                <span class="metric-value">14-43%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Early Churn (<1 month) Oct:</span>
+                                        <span class="metric-value">~11.6%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Early Churn (<1 month) Nov:</span>
+                                        <span class="metric-value">~40.0%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Early Churn (<1 month) Dec:</span>
+                                        <span class="metric-value">~31.4%</span>
+                            </div>
+
+                            <div class="interpretation">
+                                <strong>Interpretation:</strong> First 30 days are critical. High early churn (11-40%
+                                depending on cohort) confirms that onboarding and initial experience are key operational
+                                levers.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Community Composition -->
+                    <div class="reveal" data-delay="300" style="margin-top: 2.5rem;">
+                        <h4 style="font-size: 1.1rem; margin-bottom: 1rem;">Community Composition (Jan 21 Snapshot)</h4>
+                        <div class="grid grid-3">
+                            <div class="card" style="padding: 1.5rem;">
+                                <h5 style="margin-top: 0; font-size: 0.95rem; color: var(--muted);">Platform</h5>
+                                <div style="font-size: 1.75rem; font-weight: 700; color: var(--text);">485</div>
+                                <div class="small">Desktop or Mobile</div>
+                                <div
+                                    style="font-size: 1.75rem; font-weight: 700; color: var(--text); margin-top: 0.5rem;">
+                                    463</div>
+                                <div class="small">Mobile Only</div>
+                            </div>
+                            <div class="card" style="padding: 1.5rem;">
+                                <h5 style="margin-top: 0; font-size: 0.95rem; color: var(--muted);">Region</h5>
+                                <div style="font-size: 1.75rem; font-weight: 700; color: var(--text);">349</div>
+                                <div class="small">Nigeria (NG)</div>
+                                <div
+                                    style="font-size: 1.75rem; font-weight: 700; color: var(--text); margin-top: 0.5rem;">
+                                    137</div>
+                                <div class="small">Other Regions</div>
+                            </div>
+                            <div class="card" style="padding: 1.5rem;">
+                                <h5 style="margin-top: 0; font-size: 0.95rem; color: var(--muted);">Tenure</h5>
+                                <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem;">
+                                    <li style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                        <span>
+                                            < 1 month:</span> <strong>55</strong>
+                                    </li>
+                                    <li style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                        <span>1–6 months:</span> <strong>188</strong>
+                                    </li>
+                                    <li style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                        <span>6–12 months:</span> <strong>151</strong>
+                                    </li>
+                                    <li style="display: flex; justify-content: space-between;">
+                                        <span>1 year+:</span> <strong>116</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="small" style="margin-top: 1rem; color: var(--muted-2); font-style: italic;">
+                            Core participation comes from mid-tenure members (1-12 months). Audience is mobile-first and
+                            regionally concentrated with international reach.
+                        </p>
+                    </div>
+
+                    <!-- Key Takeaways -->
+                    <div class="callout" style="margin-top: 2rem;">
+                        <h4 style="margin-top: 0;">Key Insights & Applications</h4>
+                        <ul style="margin: 0.5rem 0 0 0; padding-left: 1.25rem; font-size: 0.95rem;">
+                            <li><strong>First 30 Days Are Critical:</strong> High early churn drove automation
+                                improvements in onboarding workflows</li>
+                            <li><strong>Mobile-First Audience:</strong> Informed design decisions for channel structure
+                                and announcement formatting</li>
+                            <li><strong>Acquisition Concentration:</strong> Vanity URL dominance led to contingency
+                                planning for invite distribution</li>
+                            <li><strong>Activation Friction:</strong> Low first-message rate justified progressive
+                                disclosure and guided onboarding</li>
                         </ul>
                     </div>
                 </section>
 
-                <!-- Outcome -->
-                <section>
-                    <h2>Outcome</h2>
-                    <p>
-                        Achieved healthier community operations with sustained growth. Members reported
-                        higher satisfaction with event programming and dispute handling. The moderation
-                        team operated more efficiently with clear guidelines, and leadership had better
-                        visibility into community trends through regular reporting.
+                <hr class="hr" style="margin: 3rem 0;">
+
+                <!-- ============================================
+                     PROJECT 2: ONWARD GAMING REPUBLIC
+                     ============================================ -->
+                <section class="project-section reveal">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <h2 style="margin: 0;">Onward Gaming Republic</h2>
+                        <span class="badge">Engagement & Operations</span>
+                    </div>
+                    <p style="color: var(--muted); margin-bottom: 2rem;">
+                        Role: Community Manager | 5,000+ members
                     </p>
+
+                    <!-- Context & Problem -->
+                    <h3>Context & Challenges</h3>
+                    <p>
+                        Served as Community Manager for Onward Gaming Republic, responsible for overall community
+                        health, engagement strategies, and member retention. The community required operational
+                        improvements in participation, retention, dispute management, and scalable processes.
+                    </p>
+
+                    <!-- Actions Taken -->
+                    <h3>Actions Taken</h3>
+                    <ul>
+                        <li><strong>Moderation Framework:</strong> Implemented consistent moderation policies and
+                            trained the mod team</li>
+                        <li><strong>Community Initiatives:</strong> Organized tournaments, events, and content creation
+                            opportunities</li>
+                        <li><strong>Retention Strategies:</strong> Developed member engagement programs and recognition
+                            systems</li>
+                        <li><strong>Dispute Resolution:</strong> Established fair and transparent processes for handling
+                            conflicts</li>
+                        <li><strong>Stakeholder Communication:</strong> Regular reporting to leadership on community
+                            health metrics</li>
+                    </ul>
+
+                    <!-- Data & Metrics -->
+                    <h3>Impact & Metrics</h3>
+                    <div class="grid grid-3" style="margin-top: 1.5rem;">
+                        <div class="card" style="padding: 1.5rem; text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent);">30%</div>
+                            <div class="small">Increase in community participation</div>
+                        </div>
+                        <div class="card" style="padding: 1.5rem; text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent);">15%</div>
+                            <div class="small">Year-over-year growth in active members</div>
+                        </div>
+                        <div class="card" style="padding: 1.5rem; text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent);">5,000+</div>
+                            <div class="small">Members managed across operations</div>
+                        </div>
+                    </div>
+
+                    <!-- Outcome -->
+                    <div class="callout" style="margin-top: 2rem;">
+                        <h4 style="margin-top: 0;">Outcome</h4>
+                        <p style="margin: 0;">
+                            Achieved healthier community operations with sustained growth. Members reported higher
+                            satisfaction with event programming and dispute handling. The moderation team operated more
+                            efficiently with clear guidelines, and leadership had better visibility into community
+                            trends through regular reporting.
+                        </p>
+                    </div>
                 </section>
 
-                <!-- Key Skills Demonstrated -->
-                <section>
-                    <h2>Key Skills Demonstrated</h2>
+                <hr class="hr" style="margin: 3rem 0;">
+
+                <!-- SKILLS DEMONSTRATED -->
+                <section class="reveal">
+                    <h2>Skills Demonstrated</h2>
                     <div>
+                        <span class="badge">Performance Metrics Tracking</span>
+                        <span class="badge">Data-Driven Decision Making</span>
                         <span class="badge">Community Operations</span>
-                        <span class="badge">Policy Enforcement</span>
+                        <span class="badge">Engagement Optimization</span>
+                        <span class="badge">Retention Strategies</span>
                         <span class="badge">Stakeholder Communication</span>
-                        <span class="badge">Analytics Reporting</span>
                     </div>
                 </section>
 
