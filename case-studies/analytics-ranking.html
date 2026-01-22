@@ -16,137 +16,125 @@
     <!-- ============================================
        HEADER & NAVIGATION
        ============================================ -->
-    <header class="header">
-        <nav class="nav container" aria-label="Main navigation">
-            <a href="../index.html" class="nav__logo">Zion Ogadi</a>
+    <header class="nav">
+        <div class="container nav-inner">
+            <a href="../index.html" class="brand">Zion Ogadi</a>
 
-            <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="nav__toggle-icon"></span>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="nav-toggle-icon"></span>
             </button>
 
-            <ul class="nav__links" id="nav-links">
-                <li><a href="../index.html" class="nav__link">Home</a></li>
-                <li class="nav__dropdown">
-                    <a href="../index.html#case-studies" class="nav__link">Case Studies ▾</a>
-                    <ul class="nav__dropdown-content">
-                        <li><a href="discord-revamp.html" class="nav__dropdown-link">Discord Infrastructure Revamp</a>
-                        </li>
-                        <li><a href="community-scaling.html" class="nav__dropdown-link">Community Scaling &
-                                Retention</a></li>
-                        <li><a href="analytics-ranking.html" class="nav__dropdown-link">Ranking & Analytics Systems</a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="../index.html#skills" class="nav__link">Skills</a></li>
-                <li><a href="../index.html#contact" class="nav__link">Contact</a></li>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#case-studies">Case Studies</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <article class="case-study">
-            <div class="container">
+        <article class="section">
+            <div class="container prose">
 
                 <!-- Back Link -->
-                <a href="../index.html" class="back-link">← Back to Home</a>
+                <a href="../index.html" class="back-link">&larr; Back to Home</a>
 
                 <!-- Header -->
-                <header class="case-study__header">
-                    <h1 class="case-study__title">Ranking & Performance Analytics Systems</h1>
-                    <p class="case-study__meta">Esports & Community Competitions | Systems Design</p>
+                <header style="border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 2rem;">
+                    <h1 class="h1">Ranking & Performance Analytics Systems</h1>
+                    <p class="lead" style="margin: 0;">Esports & Community Competitions | Systems Design</p>
                 </header>
 
                 <!-- Context -->
-                <section class="case-study__section">
-                    <h2 class="case-study__section-title">Context</h2>
-                    <div class="case-study__content">
-                        <p>
-                            Developed ranking and scoring systems for esports and community competitions,
-                            along with operational reporting frameworks. The goal was to provide consistent,
-                            transparent performance tracking and decision support for tournament organizers
-                            and moderation teams.
-                        </p>
-                    </div>
+                <section>
+                    <h2>Context</h2>
+                    <p>
+                        Developed ranking and scoring systems for esports and community competitions,
+                        along with operational reporting frameworks. The goal was to provide consistent,
+                        transparent performance tracking and decision support for tournament organizers
+                        and moderation teams.
+                    </p>
                 </section>
 
                 <!-- Problem -->
-                <section class="case-study__section">
-                    <h2 class="case-study__section-title">Problem</h2>
-                    <div class="case-study__content">
-                        <p>Organizations faced challenges with:</p>
-                        <ul>
-                            <li>Inconsistent performance tracking across events</li>
-                            <li>Lack of transparency in ranking calculations</li>
-                            <li>Difficulty in making fair, data-backed decisions</li>
-                            <li>No standardized reporting cadence for stakeholders</li>
-                        </ul>
-                    </div>
+                <section>
+                    <h2>Problem</h2>
+                    <p>Organizations faced challenges with:</p>
+                    <ul>
+                        <li>Inconsistent performance tracking across events</li>
+                        <li>Lack of transparency in ranking calculations</li>
+                        <li>Difficulty in making fair, data-backed decisions</li>
+                        <li>No standardized reporting cadence for stakeholders</li>
+                    </ul>
                 </section>
 
                 <!-- Actions Taken -->
-                <section class="case-study__section">
-                    <h2 class="case-study__section-title">Actions Taken</h2>
-                    <div class="case-study__content">
-                        <ul>
-                            <li><strong>Metric Definition:</strong> Identified and documented key performance indicators
-                                relevant to competitions</li>
-                            <li><strong>Scoring Logic:</strong> Designed clear, auditable scoring formulas with weighted
-                                factors</li>
-                            <li><strong>Reporting Cadence:</strong> Established regular reporting schedules for teams
-                                and moderators</li>
-                            <li><strong>Documentation:</strong> Created comprehensive guides explaining methodology for
-                                transparency</li>
-                            <li><strong>Fairness & Compliance:</strong> Built in checks for edge cases and dispute
-                                resolution paths</li>
-                        </ul>
-                    </div>
+                <section>
+                    <h2>Actions Taken</h2>
+                    <ul>
+                        <li><strong>Metric Definition:</strong> Identified and documented key performance indicators
+                            relevant to competitions</li>
+                        <li><strong>Scoring Logic:</strong> Designed clear, auditable scoring formulas with weighted
+                            factors</li>
+                        <li><strong>Reporting Cadence:</strong> Established regular reporting schedules for teams
+                            and moderators</li>
+                        <li><strong>Documentation:</strong> Created comprehensive guides explaining methodology for
+                            transparency</li>
+                        <li><strong>Fairness & Compliance:</strong> Built in checks for edge cases and dispute
+                            resolution paths</li>
+                    </ul>
                 </section>
 
                 <!-- Data & Metrics -->
-                <section class="case-study__section">
-                    <h2 class="case-study__section-title">Data & Metrics</h2>
-                    <div class="case-study__metrics">
-                        <ul class="case-study__metrics-list">
-                            <li class="case-study__metrics-item">
-                                <strong>Metrics tracked:</strong> Match results, placement points, participation rates,
-                                consistency scores
+                <section>
+                    <h2>Data & Metrics</h2>
+                    <div class="callout">
+                        <ul style="list-style: none; padding: 0;">
+                            <li
+                                style="margin-bottom: 1rem; border-bottom: 1px solid var(--accent-border); padding-bottom: 0.5rem;">
+                                <strong style="color: var(--accent); font-size: 1.25rem;">Metrics tracked</strong><br>
+                                <span class="small">Match results, placement points, participation rates, consistency
+                                    scores</span>
                             </li>
-                            <li class="case-study__metrics-item">
-                                <strong>Methodology:</strong> Weighted scoring with decay factors and tier multipliers
+                            <li
+                                style="margin-bottom: 1rem; border-bottom: 1px solid var(--accent-border); padding-bottom: 0.5rem;">
+                                <strong style="color: var(--accent); font-size: 1.25rem;">Methodology</strong><br>
+                                <span class="small">Weighted scoring with decay factors and tier multipliers</span>
                             </li>
-                            <li class="case-study__metrics-item">
-                                <strong>Reporting:</strong> Weekly summaries for teams, monthly reports for leadership
+                            <li>
+                                <strong style="color: var(--accent); font-size: 1.25rem;">Reporting</strong><br>
+                                <span class="small">Weekly summaries for teams, monthly reports for leadership</span>
                             </li>
                         </ul>
                     </div>
                 </section>
 
                 <!-- Outcome -->
-                <section class="case-study__section">
-                    <h2 class="case-study__section-title">Outcome</h2>
-                    <div class="case-study__content">
-                        <p>
-                            The systems enabled clearer decision-making with consistent, explainable rankings.
-                            Teams and participants could understand how scores were calculated, reducing disputes.
-                            Moderators had defined escalation paths for edge cases, and leadership received
-                            regular insights into competitive health and trends.
-                        </p>
-                    </div>
+                <section>
+                    <h2>Outcome</h2>
+                    <p>
+                        The systems enabled clearer decision-making with consistent, explainable rankings.
+                        Teams and participants could understand how scores were calculated, reducing disputes.
+                        Moderators had defined escalation paths for edge cases, and leadership received
+                        regular insights into competitive health and trends.
+                    </p>
                 </section>
 
                 <!-- Key Skills Demonstrated -->
-                <section class="case-study__section">
-                    <h2 class="case-study__section-title">Key Skills Demonstrated</h2>
-                    <ul class="case-study__skills">
-                        <li class="case-study__skill-tag">Data Analytics</li>
-                        <li class="case-study__skill-tag">Metric Design</li>
-                        <li class="case-study__skill-tag">Documentation</li>
-                        <li class="case-study__skill-tag">Governance</li>
-                    </ul>
+                <section>
+                    <h2>Key Skills Demonstrated</h2>
+                    <div>
+                        <span class="badge">Data Analytics</span>
+                        <span class="badge">Metric Design</span>
+                        <span class="badge">Documentation</span>
+                        <span class="badge">Governance</span>
+                    </div>
                 </section>
 
                 <!-- Back Link (bottom) -->
-                <a href="../index.html" class="back-link">← Back to Home</a>
+                <br>
+                <a href="../index.html" class="back-link">&larr; Back to Home</a>
 
             </div>
         </article>
@@ -154,15 +142,12 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <p class="footer__text">
-                    <strong>Location:</strong> Nigeria &nbsp;|&nbsp;
-                    <strong>Status:</strong> Available for remote roles
-                </p>
-                <p class="footer__text footer__text--muted">
-                    Last updated: January 2026
-                </p>
+        <div class="container footer-content">
+            <div>
+                <strong>Zion Ogadi</strong> &copy; 2026. All rights reserved.
+            </div>
+            <div>
+                Location: Nigeria &nbsp;|&nbsp; Available for remote roles
             </div>
         </div>
     </footer>
