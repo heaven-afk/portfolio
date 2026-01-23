@@ -5,6 +5,7 @@
  * Features:
  * - Mobile Navigation Toggle
  * - Scroll Reveal Animations
+ * - Data Visualization Animations
  * - Smooth Scrolling
  */
 
@@ -50,6 +51,7 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
+          entry.target.classList.add('active'); // For new animations
           observer.unobserve(entry.target); // Only animate once
         }
       });
@@ -62,8 +64,100 @@
     revealElements.forEach(el => revealObserver.observe(el));
   } else {
     // Fallback for older browsers: show all immediately
-    revealElements.forEach(el => el.classList.add('is-visible'));
+    revealElements.forEach(el => {
+      el.classList.add('is-visible');
+      el.classList.add('active');
+    });
   }
+
+  // ==========================================
+  // Data Visualization Animations
+  // ==========================================
+
+  // Animate progress bars
+  const animateProgressBars = () => {
+    const progressObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const progressFill = entry.target;
+          const targetWidth = progressFill.getAttribute('data-width');
+          if (targetWidth) {
+            setTimeout(() => {
+              progressFill.style.width = targetWidth;
+              progressFill.classList.add('animate');
+            }, 200);
+          }
+          observer.unobserve(progressFill);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.progress-fill').forEach(fill => {
+      progressObserver.observe(fill);
+    });
+  };
+
+  // Animate bar charts
+  const animateBarCharts = () => {
+    const barObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const barFill = entry.target;
+          const targetWidth = barFill.getAttribute('data-width');
+          if (targetWidth) {
+            setTimeout(() => {
+              barFill.style.width = targetWidth;
+              barFill.classList.add('animate');
+            }, 200);
+          }
+          observer.unobserve(barFill);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.bar-fill').forEach(bar => {
+      barObserver.observe(bar);
+    });
+  };
+
+  // Animate line chart points
+  const animateLineCharts = () => {
+    const lineObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const linePoint = entry.target;
+          const targetHeight = linePoint.getAttribute('data-height');
+          if (targetHeight) {
+            setTimeout(() => {
+              linePoint.style.height = targetHeight;
+              linePoint.classList.add('animate');
+            }, 200);
+          }
+          observer.unobserve(linePoint);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.line-point').forEach(point => {
+      lineObserver.observe(point);
+    });
+  };
+
+  // Animate stat numbers
+  const animateStatNumbers = () => {
+    const statObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stat-number').forEach(stat => {
+      statObserver.observe(stat);
+    });
+  };
 
   // ==========================================
   // Smooth Scroll (Enhancement)
@@ -83,6 +177,16 @@
         targetElement.focus({ preventScroll: true }); // A11y
       }
     });
+  });
+
+  // ==========================================
+  // Initialize All Animations
+  // ==========================================
+  document.addEventListener('DOMContentLoaded', () => {
+    animateProgressBars();
+    animateBarCharts();
+    animateLineCharts();
+    animateStatNumbers();
   });
 
 })();
