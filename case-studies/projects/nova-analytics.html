@@ -105,32 +105,208 @@
 
         <!-- Animated Data Visualizations -->
         <section class="reveal">
-            <h2>Monthly Engagement Performance</h2>
+            <h2>Monthly Engagement Efficiency</h2>
             <div class="chart-container fade-in-up">
-                <div class="chart-title">Communication Rate % (Monthly Trend)</div>
-                <div class="bar-chart">
-                    <div class="bar-row">
-                        <div class="bar-label">Nov 25</div>
-                        <div class="bar-track">
-                            <div class="bar-fill" data-width="92%" style="width: 0;">16.2%</div>
+                <div class="chart-title">Visitors vs. Communication Rate</div>
+
+                <!-- Dual Axis Legend -->
+                <div
+                    style="display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 1.5rem; font-size: 0.8rem;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <div
+                            style="width: 12px; height: 12px; background: var(--accent-soft); border: 1px solid var(--accent);">
                         </div>
+                        <span style="color: var(--muted);">Total Visitors</span>
                     </div>
-                    <div class="bar-row">
-                        <div class="bar-label">Dec 25</div>
-                        <div class="bar-track">
-                            <div class="bar-fill" data-width="100%" style="width: 0;">18.4% (Peak)</div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <div style="width: 12px; height: 2px; background: var(--text);"></div>
+                        <div
+                            style="width: 8px; height: 8px; border-radius: 50%; background: var(--text); margin-left: -10px;">
                         </div>
-                    </div>
-                    <div class="bar-row">
-                        <div class="bar-label">Jan 26</div>
-                        <div class="bar-track">
-                            <div class="bar-fill" data-width="78%" style="width: 0;">14.3%</div>
-                        </div>
+                        <span style="color: var(--text); font-weight: 600;">Comm Rate %</span>
                     </div>
                 </div>
+
+                <div class="dual-axis-chart"
+                    style="position: relative; height: 250px; margin-top: 1rem; padding-bottom: 2rem;">
+
+                    <!-- Y-Axis Lines (Background) -->
+                    <div
+                        style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; pointer-events: none; z-index: 0;">
+                        <div style="border-bottom: 1px dashed var(--border); width: 100%; height: 1px;"></div>
+                        <div style="border-bottom: 1px dashed var(--border); width: 100%; height: 1px;"></div>
+                        <div style="border-bottom: 1px dashed var(--border); width: 100%; height: 1px;"></div>
+                        <div style="border-bottom: 1px dashed var(--border); width: 100%; height: 1px;"></div>
+                        <div style="border-bottom: 1px solid var(--border); width: 100%; height: 1px;"></div>
+                    </div>
+
+                    <!-- Bars (Visitors) + Points (Rate) Container -->
+                    <div
+                        style="position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: space-around; padding: 0 1rem; z-index: 1;">
+
+                        <!-- Oct 25 -->
+                        <div class="chart-column"
+                            style="display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; width: 15%;">
+                            <!-- Point Position: 15.0% (scaled 0-20%) -> 75% height -->
+                            <div class="data-point"
+                                style="margin-bottom: calc(75% - 20px); position: absolute; z-index: 3;">
+                                <div class="tooltip">15.0%</div>
+                                <div
+                                    style="width: 10px; height: 10px; background: var(--text); border: 2px solid var(--bg); border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                </div>
+                            </div>
+                            <!-- Bar Height: 459 (scaled 0-500) -> 91.8% -->
+                            <div class="bar-fill"
+                                style="width: 100%; height: 0; animation: growBar1 1s ease-out forwards 0.2s; background: var(--accent-soft); border-top: 2px solid var(--accent); border-radius: 4px 4px 0 0;">
+                            </div>
+                            <div
+                                style="margin-top: 0.75rem; font-size: 0.75rem; color: var(--muted); font-weight: 600;">
+                                Oct 25</div>
+                            <div
+                                style="position: absolute; bottom: 30px; font-size: 0.7rem; color: var(--accent-2); font-weight: 700;">
+                                459</div>
+                        </div>
+
+                        <!-- Nov 25 -->
+                        <div class="chart-column"
+                            style="display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; width: 15%;">
+                            <!-- Point: 17.3% -> 86.5% height -->
+                            <div class="data-point"
+                                style="margin-bottom: calc(86.5% - 20px); position: absolute; z-index: 3;">
+                                <div class="tooltip">17.3%</div>
+                                <div
+                                    style="width: 10px; height: 10px; background: var(--text); border: 2px solid var(--bg); border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                </div>
+                            </div>
+                            <!-- Bar: 467 -> 93.4% -->
+                            <div class="bar-fill"
+                                style="width: 100%; height: 0; animation: growBar2 1s ease-out forwards 0.4s; background: var(--accent-soft); border-top: 2px solid var(--accent); border-radius: 4px 4px 0 0;">
+                            </div>
+                            <div
+                                style="margin-top: 0.75rem; font-size: 0.75rem; color: var(--muted); font-weight: 600;">
+                                Nov 25</div>
+                            <div
+                                style="position: absolute; bottom: 30px; font-size: 0.7rem; color: var(--accent-2); font-weight: 700;">
+                                467</div>
+                        </div>
+
+                        <!-- Dec 25 -->
+                        <div class="chart-column"
+                            style="display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; width: 15%;">
+                            <!-- Point: 18.4% -> 92% height -->
+                            <div class="data-point"
+                                style="margin-bottom: calc(92% - 20px); position: absolute; z-index: 3;">
+                                <div class="tooltip">18.4%</div>
+                                <div
+                                    style="width: 12px; height: 12px; background: var(--accent); border: 2px solid var(--bg); border-radius: 50%; box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);">
+                                </div>
+                            </div>
+                            <!-- Bar: 423 -> 84.6% -->
+                            <div class="bar-fill"
+                                style="width: 100%; height: 0; animation: growBar3 1s ease-out forwards 0.6s; background: var(--accent-soft); border-top: 2px solid var(--accent); border-radius: 4px 4px 0 0;">
+                            </div>
+                            <div style="margin-top: 0.75rem; font-size: 0.75rem; color: var(--text); font-weight: 700;">
+                                Dec 25</div>
+                            <div
+                                style="position: absolute; bottom: 30px; font-size: 0.7rem; color: var(--accent-2); font-weight: 700;">
+                                423</div>
+                        </div>
+
+                        <!-- Jan 26 -->
+                        <div class="chart-column"
+                            style="display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; width: 15%;">
+                            <!-- Point: 14.0% -> 70% height -->
+                            <div class="data-point"
+                                style="margin-bottom: calc(70% - 20px); position: absolute; z-index: 3;">
+                                <div class="tooltip">14.0%</div>
+                                <div
+                                    style="width: 10px; height: 10px; background: var(--text); border: 2px solid var(--bg); border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                </div>
+                            </div>
+                            <!-- Bar: 328 -> 65.6% -->
+                            <div class="bar-fill"
+                                style="width: 100%; height: 0; animation: growBar4 1s ease-out forwards 0.8s; background: var(--surface); border: 1px dashed var(--muted-2); border-bottom: none; border-radius: 4px 4px 0 0;">
+                            </div>
+                            <div
+                                style="margin-top: 0.75rem; font-size: 0.75rem; color: var(--muted); font-weight: 600;">
+                                Jan 26</div>
+                            <div
+                                style="position: absolute; bottom: 30px; font-size: 0.7rem; color: var(--muted); font-weight: 700;">
+                                328</div>
+                        </div>
+
+                    </div>
+
+                    <!-- SVG Line Overlay -->
+                    <svg
+                        style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2; overflow: visible;">
+                        <!-- Points coordinates calculated approx based on column positions (12.5%, 37.5%, 62.5%, 87.5%) -->
+                        <!-- Y coords inverted: 100% - value% -->
+                        <polyline points="
+                            60,62  165,34  270,20  375,75
+                        " fill="none" stroke="var(--text)" stroke-width="2" stroke-dasharray="500"
+                            stroke-dashoffset="500" style="animation: drawLine 2s ease-out forwards 1s; opacity: 0.8;">
+                        </polyline>
+                    </svg>
+
+                </div>
+
+                <style>
+                    @keyframes growBar1 {
+                        to {
+                            height: 91.8%;
+                        }
+                    }
+
+                    @keyframes growBar2 {
+                        to {
+                            height: 93.4%;
+                        }
+                    }
+
+                    @keyframes growBar3 {
+                        to {
+                            height: 84.6%;
+                        }
+                    }
+
+                    @keyframes growBar4 {
+                        to {
+                            height: 65.6%;
+                        }
+                    }
+
+                    @keyframes drawLine {
+                        to {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+
+                    .tooltip {
+                        position: absolute;
+                        bottom: 100%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: var(--text);
+                        color: var(--bg);
+                        padding: 2px 6px;
+                        border-radius: 4px;
+                        font-size: 0.7rem;
+                        font-weight: 700;
+                        margin-bottom: 6px;
+                        opacity: 0;
+                        transition: opacity 0.2s;
+                    }
+
+                    .chart-column:hover .tooltip {
+                        opacity: 1;
+                    }
+                </style>
+
                 <p class="small" style="margin-top: 1rem; color: var(--muted);">
-                    <strong>Above Industry Average:</strong> Consistently 14-18% engagement exceeds typical 10-15%
-                    gaming community benchmark
+                    <strong>Efficiency Insight:</strong> While traffic peaked in Nov, <span
+                        style="color: var(--text); font-weight: 600;">highest engagement quality (18.4%)</span> occurred
+                    in Dec during holiday events, despite lower total volume.
                 </p>
             </div>
         </section>
@@ -206,19 +382,20 @@
         <section>
             <h2>Strategic Insights</h2>
             <div class="callout">
-                <h4 style="margin-top: 0;">Controlled Growth Strategy</h4>
+                <h4 style="margin-top: 0;">Volume vs. Efficiency Inverse</h4>
                 <p style="margin: 0;">
-                    Daily fluctuations rarely exceed ±3 members, indicating <strong>exceptionally low churn</strong>
-                    and high community satisfaction. Quality-over-quantity approach creates stable foundation.
+                    Data reveals a strategic trade-off: <strong>November's traffic peak (467 visitors)</strong> resulted
+                    in lower interaction quality (17.3%), whereas December's focused audience (423 visitors) drove
+                    <strong>peak engagement efficiency (18.4%)</strong>.
                 </p>
             </div>
 
             <div class="callout" style="margin-top: 1.5rem;">
-                <h4 style="margin-top: 0;">Above-Industry Engagement</h4>
+                <h4 style="margin-top: 0;">Resilient During Seasonal Dips</h4>
                 <p style="margin: 0;">
-                    Gaming communities avg. 10-15% monthly communication rate. Nova's <strong>14-18% range exceeds
-                        industry standard</strong>,
-                    with peak 18.4% in December during holiday scrims season.
+                    Despite a seasonal traffic drop in January (328 visitors), the communication rate stabilized at
+                    <strong>14.0%</strong>, comfortably remaining above the 10-15% industry baseline for gaming
+                    communities.
                 </p>
             </div>
 
