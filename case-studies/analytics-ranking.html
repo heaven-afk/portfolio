@@ -552,63 +552,250 @@
                 </section>
 
                 <section class="reveal">
-                    <h2>Scoring Breakdown Analysis</h2>
-                    <div class="chart-container fade-in-up">
-                        <div class="chart-title">Top Team Performance Distribution (SHIBO ESPORTS)</div>
-                        <div
-                            style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin: 2rem 0;">
-                            <!-- Pie Chart Section -->
-                            <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                                <div
-                                    style="width: 200px; height: 200px; border-radius: 50%; background: conic-gradient(var(--accent) 0deg 192deg, var(--accent-2) 192deg 360deg); position: relative; display: flex; align-items: center; justify-content: center;">
-                                    <div
-                                        style="width: 120px; height: 120px; border-radius: 50%; background: var(--bg); display: flex; align-items: center; justify-content: center; flex-direction: column;">
-                                        <span
-                                            style="font-size: 1.5rem; font-weight: 700; color: var(--text);">730</span>
-                                        <span style="font-size: 0.75rem; color: var(--muted);">Total Pts</span>
-                                    </div>
-                                </div>
-                                <div style="display: flex; gap: 1.5rem;">
-                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                        <div
-                                            style="width: 16px; height: 16px; background: var(--accent); border-radius: 3px;">
-                                        </div>
-                                        <span style="font-size: 0.875rem;">Kills (53.4%)</span>
-                                    </div>
-                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                        <div
-                                            style="width: 16px; height: 16px; background: var(--accent-2); border-radius: 3px;">
-                                        </div>
-                                        <span style="font-size: 0.875rem;">Placement (46.6%)</span>
-                                    </div>
-                                </div>
-                            </div>
+                    <h2>Team Performance Breakdown Analysis</h2>
+                    <p style="color: var(--muted); margin-bottom: 2rem;">Scoring distribution across top-performing
+                        teams, revealing strategic approaches to kills vs placement</p>
 
-                            <!-- Stats Section -->
-                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <!-- Individual Team Pie Charts Grid -->
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+
+                        <!-- Team 1: SHIBO ESPORTS -->
+                        <div class="chart-container fade-in-up">
+                            <div class="chart-title">#1 SHIBO ESPORTS</div>
+                            <div
+                                style="display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 1.5rem;">
                                 <div
-                                    style="padding: 1rem; background: var(--surface); border-left: 3px solid var(--accent); border-radius: 4px;">
-                                    <div style="font-size: 0.875rem; color: var(--muted); margin-bottom: 0.25rem;">Kill
-                                        Points</div>
-                                    <div style="font-size: 1.75rem; font-weight: 700; color: var(--accent);">390</div>
-                                    <div style="font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem;">53.4% of
-                                        total score</div>
+                                    style="width: 180px; height: 180px; border-radius: 50%; background: conic-gradient(var(--accent) 0deg 192deg, var(--accent-2) 192deg 360deg); position: relative; display: flex; align-items: center; justify-content: center;">
+                                    <div
+                                        style="width: 110px; height: 110px; border-radius: 50%; background: var(--surface); display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                                        <span
+                                            style="font-size: 1.25rem; font-weight: 700; color: var(--text);">730</span>
+                                        <span style="font-size: 0.7rem; color: var(--muted);">Total</span>
+                                    </div>
                                 </div>
-                                <div
-                                    style="padding: 1rem; background: var(--surface); border-left: 3px solid var(--accent-2); border-radius: 4px;">
-                                    <div style="font-size: 0.875rem; color: var(--muted); margin-bottom: 0.25rem;">
-                                        Placement Points</div>
-                                    <div style="font-size: 1.75rem; font-weight: 700; color: var(--accent-2);">340</div>
-                                    <div style="font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem;">46.6% of
-                                        total score</div>
+                                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div
+                                            style="width: 12px; height: 12px; background: var(--accent); border-radius: 2px;">
+                                        </div>
+                                        <span style="font-size: 0.8rem;">Kills 390 (53.4%)</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div
+                                            style="width: 12px; height: 12px; background: var(--accent-2); border-radius: 2px;">
+                                        </div>
+                                        <span style="font-size: 0.8rem;">Place 340 (46.6%)</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <p class="small" style="margin-top: 1rem; color: var(--muted);">
-                            <strong>Balance Analysis:</strong> SHIBO ESPORTS demonstrates balanced performance with
-                            nearly equal contribution from kills (53.4%) and placement (46.6%), validating the weighted
-                            formula's ability to reward both consistent placement and aggressive gameplay.
-                        </p>
+
+                        <!-- Team 2: LEGIONARIES -->
+                        <div class="chart-container fade-in-up">
+                            <div class="chart-title">#2 LEGIONARIES</div>
+                            <div
+                                style="display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 1.5rem;">
+                                <div
+                                    style="width: 180px; height: 180px; border-radius: 50%; background: conic-gradient(var(--accent) 0deg 204deg, var(--accent-2) 204deg 360deg); position: relative; display: flex; align-items: center; justify-content: center;">
+                                    <div
+                                        style="width: 110px; height: 110px; border-radius: 50%; background: var(--surface); display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                                        <span
+                                            style="font-size: 1.25rem; font-weight: 700; color: var(--text);">669</span>
+                                        <span style="font-size: 0.7rem; color: var(--muted);">Total</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div
+                                            style="width: 12px; height: 12px; background: var(--accent); border-radius: 2px;">
+                                        </div>
+                                        <span style="font-size: 0.8rem;">Kills 379 (56.7%)</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div
+                                            style="width: 12px; height: 12px; background: var(--accent-2); border-radius: 2px;">
+                                        </div>
+                                        <span style="font-size: 0.8rem;">Place 290 (43.3%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team 3: HORIZON ONE -->
+                        <div class="chart-container fade-in-up">
+                            <div class="chart-title">#3 HORIZON ONE</div>
+                            <div
+                                style="display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 1.5rem;">
+                                <div
+                                    style="width: 180px; height: 180px; border-radius: 50%; background: conic-gradient(var(--accent) 0deg 173deg, var(--accent-2) 173deg 360deg); position: relative; display: flex; align-items: center; justify-content: center;">
+                                    <div
+                                        style="width: 110px; height: 110px; border-radius: 50%; background: var(--surface); display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                                        <span
+                                            style="font-size: 1.25rem; font-weight: 700; color: var(--text);">684</span>
+                                        <span style="font-size: 0.7rem; color: var(--muted);">Total</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div
+                                            style="width: 12px; height: 12px; background: var(--accent); border-radius: 2px;">
+                                        </div>
+                                        <span style="font-size: 0.8rem;">Kills 329 (48.1%)</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div
+                                            style="width: 12px; height: 12px; background: var(--accent-2); border-radius: 2px;">
+                                        </div>
+                                        <span style="font-size: 0.8rem;">Place 355 (51.9%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team 4: PARIS CHITAURI -->
+                        <div class="chart-container fade-in-up">
+                            <div class="chart-title">#4 PARIS CHITAURI</div>
+                            <div
+                                style="display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 1.5rem;">
+                                <div
+                                    style="width: 180px; height: 180px; border-radius: 50%; background: conic-gradient(var(--accent) 0deg 191deg, var(--accent-2) 191deg 360deg); position: relative; display: flex; align-items: center; justify-content: center;">
+                                    <div
+                                        style="width: 110px; height: 110px; border-radius: 50%; background: var(--surface); display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                                        <span
+                                            style="font-size: 1.25rem; font-weight: 700; color: var(--text);">513</span>
+                                        <span style="font-size: 0.7rem; color: var(--muted);">Total</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div
+                                            style="width: 12px; height: 12px; background: var(--accent); border-radius: 2px;">
+                                        </div>
+                                        <span style="font-size: 0.8rem;">Kills 273 (53.2%)</span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <div
+                                            style="width: 12px; height: 12px; background: var(--accent-2); border-radius: 2px;">
+                                        </div>
+                                        <span style="font-size: 0.8rem;">Place 240 (46.8%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cross-Team Comparisons with Overlaid Pie Charts -->
+                    <h3 style="margin: 3rem 0 1.5rem 0;">Cross-Team Comparisons</h3>
+                    <p style="color: var(--muted); margin-bottom: 2rem;">Overlaid visualizations highlighting strategic
+                        differences between top teams</p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem;">
+
+                        <!-- Comparison 1: SHIBO Kills vs HORIZON ONE Kills -->
+                        <div class="chart-container fade-in-up">
+                            <div class="chart-title">Kill Performance: SHIBO vs HORIZON ONE</div>
+                            <div
+                                style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; padding: 2rem;">
+                                <!-- Overlaid Pie Charts -->
+                                <div style="position: relative; width: 200px; height: 200px;">
+                                    <!-- SHIBO Layer (back) -->
+                                    <div
+                                        style="position: absolute; width: 200px; height: 200px; border-radius: 50%; background: conic-gradient(var(--accent) 0deg 192deg, transparent 192deg 360deg); opacity: 0.4;">
+                                    </div>
+                                    <!-- HORIZON ONE Layer (front, offset) -->
+                                    <div
+                                        style="position: absolute; width: 200px; height: 200px; border-radius: 50%; background: conic-gradient(var(--accent-2) 0deg 173deg, transparent 173deg 360deg); opacity: 0.6; top: 10px; left: 10px;">
+                                    </div>
+                                    <!-- Center Label -->
+                                    <div
+                                        style="position: absolute; width: 200px; height: 200px; display: flex; align-items: center; justify-content: center;">
+                                        <div
+                                            style="background: var(--surface); border-radius: 50%; padding: 1rem; text-align: center;">
+                                            <div style="font-size: 0.7rem; color: var(--muted);">Kill Points</div>
+                                            <div style="font-size: 0.9rem; font-weight: 700; color: var(--text);">
+                                                Comparison</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Legend -->
+                                <div style="display: flex; flex-direction: column; gap: 0.75rem; width: 100%;">
+                                    <div
+                                        style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: rgba(79, 70, 229, 0.1); border-radius: 4px;">
+                                        <span style="font-size: 0.85rem; font-weight: 600;">SHIBO ESPORTS</span>
+                                        <span style="font-size: 0.85rem; color: var(--accent);">390 kills (53.4%)</span>
+                                    </div>
+                                    <div
+                                        style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: rgba(20, 184, 166, 0.1); border-radius: 4px;">
+                                        <span style="font-size: 0.85rem; font-weight: 600;">HORIZON ONE</span>
+                                        <span style="font-size: 0.85rem; color: var(--accent-2);">329 kills
+                                            (48.1%)</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.75rem; color: var(--muted); text-align: center;">SHIBO's more
+                                    aggressive playstyle yields 18.5% more kill points</p>
+                            </div>
+                        </div>
+
+                        <!-- Comparison 2: SHIBO Placement vs LEGIONARIES Placement -->
+                        <div class="chart-container fade-in-up">
+                            <div class="chart-title">Placement Strategy: SHIBO vs LEGIONARIES</div>
+                            <div
+                                style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; padding: 2rem;">
+                                <!-- Overlaid Pie Charts -->
+                                <div style="position: relative; width: 200px; height: 200px;">
+                                    <!-- SHIBO Placement Layer (back) -->
+                                    <div
+                                        style="position: absolute; width: 200px; height: 200px; border-radius: 50%; background: conic-gradient(var(--accent-2) 0deg 168deg, transparent 168deg 360deg); opacity: 0.5;">
+                                    </div>
+                                    <!-- LEGIONARIES Placement Layer (front, offset) -->
+                                    <div
+                                        style="position: absolute; width: 200px; height: 200px; border-radius: 50%; background: conic-gradient(var(--accent) 0deg 156deg, transparent 156deg 360deg); opacity: 0.6; top: 10px; left: 10px;">
+                                    </div>
+                                    <!-- Center Label -->
+                                    <div
+                                        style="position: absolute; width: 200px; height: 200px; display: flex; align-items: center; justify-content: center;">
+                                        <div
+                                            style="background: var(--surface); border-radius: 50%; padding: 1rem; text-align: center;">
+                                            <div style="font-size: 0.7rem; color: var(--muted);">Placement Pts</div>
+                                            <div style="font-size: 0.9rem; font-weight: 700; color: var(--text);">
+                                                Comparison</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Legend -->
+                                <div style="display: flex; flex-direction: column; gap: 0.75rem; width: 100%;">
+                                    <div
+                                        style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: rgba(20, 184, 166, 0.1); border-radius: 4px;">
+                                        <span style="font-size: 0.85rem; font-weight: 600;">SHIBO ESPORTS</span>
+                                        <span style="font-size: 0.85rem; color: var(--accent-2);">340 pts (46.6%)</span>
+                                    </div>
+                                    <div
+                                        style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; background: rgba(79, 70, 229, 0.1); border-radius: 4px;">
+                                        <span style="font-size: 0.85rem; font-weight: 600;">LEGIONARIES</span>
+                                        <span style="font-size: 0.85rem; color: var(--accent);">290 pts (43.3%)</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.75rem; color: var(--muted); text-align: center;">SHIBO maintains
+                                    superior placement consistency (17.2% advantage)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Insights -->
+                    <div
+                        style="margin-top: 3rem; padding: 1.5rem; background: var(--surface); border-left: 4px solid var(--accent); border-radius: 4px;">
+                        <h4 style="margin: 0 0 1rem 0; color: var(--text);">Strategic Insights</h4>
+                        <ul style="margin: 0; padding-left: 1.5rem; color: var(--muted); line-height: 1.8;">
+                            <li><strong>SHIBO ESPORTS</strong> demonstrates the most balanced approach (53.4% kills /
+                                46.6% placement), combining aggressive play with strategic positioning</li>
+                            <li><strong>LEGIONARIES</strong> shows a kill-focused strategy (56.7% kills), prioritizing
+                                eliminations over consistent placement</li>
+                            <li><strong>HORIZON ONE</strong> inverts the meta with placement-first gameplay (51.9%
+                                placement), securing points through survival and positioning</li>
+                            <li><strong>PARIS CHITAURI</strong> mirrors SHIBO's balanced philosophy, validating the
+                                effectiveness of hybrid strategies</li>
+                        </ul>
                     </div>
                 </section>
 
