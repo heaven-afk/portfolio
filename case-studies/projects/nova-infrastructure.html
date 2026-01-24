@@ -94,68 +94,86 @@
         <section>
             <h2>Infrastructure Implementation</h2>
 
-            <h3>1. Automated Onboarding System</h3>
-            <p>Implemented Discord's native Onboarding feature to create a guided member journey with customization
-                questions:</p>
+            <h3>Operational Evidence: Automated Member Segmentation</h3>
+            <p>Discord's native onboarding feature was configured to implement preference-based member routing—critical
+                for
+                delivering geographically appropriate scrims notifications:</p>
 
             <div style="margin: 2rem 0;">
                 <img src="../../assets/images/nova-onboarding.png"
                     alt="Nova Gaming Network automated onboarding customization questions"
                     style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
-                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Automated onboarding
-                    with event interests, gender selection, and region filtering</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Multi-option
+                    preference selection (Event Interests: Scrims, Content, AF Podcast, Memes; Demographics: Gender;
+                    Regional Routing) enables automated role provisioning for targeted scrims alerts and community
+                    engagement channels.</p>
             </div>
 
-            <p><strong>Onboarding Flow:</strong></p>
+            <p><strong>Segmentation Logic:</strong></p>
             <ul>
-                <li><strong>Event Interests:</strong> Scrims, Content, AF Podcast, Memes, Community News</li>
-                <li><strong>Demographics:</strong> Gender selection for inclusive community building</li>
-                <li><strong>Regional Routing:</strong> Automatic region assignment (Africa, Asia, Europe, North America,
-                    South America, Australia)</li>
+                <li><strong>Event interest routing:</strong> Scrims, Content, AF Podcast, Memes, Community News —
+                    ensures
+                    members only receive notifications for opted-in activities</li>
+                <li><strong>Inclusive demographics:</strong> Gender selection supports community-building initiatives
+                    and
+                    targeted engagement strategies</li>
+                <li><strong>Geographic segmentation:</strong> 6-region selection (Africa, Asia, Europe, North America,
+                    South America, Australia) enables latency-appropriate scrims matching</li>
             </ul>
 
             <div style="margin: 2rem 0;">
                 <img src="../../assets/images/nova-region-selection.png"
                     alt="Nova Gaming Network region selection interface"
                     style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
-                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Multi-region selection
-                    ensuring players are routed to appropriate scrims and events</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">6-region selection
+                    interface enables members to self-select geographic zones, automatically assigning region-specific
+                    roles
+                    for scrims notifications tailored to appropriate time zones and latency constraints.</p>
             </div>
 
             <div style="margin: 2rem 0;">
                 <img src="../../assets/images/nova-onboarding-updates.png"
                     alt="Nova Gaming Network news and updates opt-in"
                     style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
-                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Final onboarding step
-                    - opt-in for Nova news and event updates</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Final onboarding
+                    step: opt-in for Nova announcements and event updates—reducing notification noise while maintaining
+                    engagement pathways for interested members.</p>
             </div>
 
-            <p><strong>Post-Onboarding Experience:</strong></p>
-            <p>After completing the onboarding flow, members are immediately welcomed with a comprehensive Server Guide
-                featuring a "Get Started" checklist:</p>
+            <p><strong>Post-Onboarding Activation:</strong></p>
+            <p>Members completing the flow are immediately presented with a structured activation checklist designed to
+                reduce passive membership and drive initial engagement:</p>
 
             <div style="margin: 2rem 0;">
                 <img src="../../assets/images/nova-server-guide.png"
                     alt="Nova Gaming Network Server Guide welcome screen"
                     style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
-                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Server Guide with
-                    step-by-step activation checklist (Know About Us, Read Server Rules, Say Hello, Read the rules)</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Step-by-step "Get
+                    Started" checklist (Know About Us, Read Server Rules, Say Hello) provides clear activation pathway,
+                    reducing member passivity and establishing behavioral norms for new community entrants.</p>
             </div>
 
-            <p><strong>Impact:</strong> This automated system eliminated manual role assignment, reduced onboarding time
-                from ~5 minutes to under 60 seconds, and ensured every member was properly categorized for relevant
-                scrims notifications. The Server Guide provides a smooth transition from onboarding to active
-                participation.</p>
+            <p><em>This automated segmentation and activation system eliminated manual role assignment, reduced
+                    onboarding
+                    time from ~5 minutes to under 60 seconds, and ensured geographically appropriate scrims
+                    routing—directly
+                    supporting the 18.4% communication rate achieved through targeted, low-noise notifications.</em></p>
 
-            <h3>2. Channel Architecture</h3>
-            <p>Designed a scalable channel structure optimized for competitive esports operations:</p>
+            <h3>Structural Evidence: Functional Channel Segmentation</h3>
+            <p>The channel architecture was designed to separate internal operations, public information, competitive
+                infrastructure, and community engagement—enabling permission-based access control and reducing
+                cross-category
+                noise:</p>
 
             <div style="margin: 2rem 0;">
                 <img src="../../assets/images/nova-channel-structure.png"
                     alt="Nova Gaming Network complete channel structure"
                     style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
-                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Organized channel
-                    categories: STAFFs, HOME, NOVA RECORDS, COMMUNITY, and SCRIMS</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Tiered category
+                    structure (STAFFs, HOME, NOVA RECORDS, COMMUNITY, SCRIMS) implements role-based visibility and
+                    functional
+                    separation to streamline workflows, reduce member overwhelm, and enable specialized operational
+                    channels.</p>
             </div>
 
             <p><strong>Category Breakdown:</strong></p>
@@ -201,8 +219,17 @@
                 <img src="../../assets/images/nova-scrims-results.png" alt="Nova Gaming Network scrims lobby results"
                     style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
                 <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Active scrims results
-                    channel showing competitive match outcomes</p>
+                    channel demonstrates public match outcome transparency—posting competitive data in real-time to
+                    establish
+                    accountability, enable performance tracking, and support data-driven improvement for participating
+                    teams.</p>
             </div>
+
+            <p><em>This channel architecture directly supported Nova's foundation-building phase by creating clear
+                    operational workflows for staff, transparent competitive infrastructure for scrims participants, and
+                    low-noise community engagement spaces—collectively enabling the 18.4% communication rate through
+                    targeted,
+                    relevant notifications.</em></p>
 
             <div class="callout">
                 <p><strong>COMMUNITY</strong> — Engagement and retention</p>
@@ -220,16 +247,19 @@
                 <p><strong>NOVA RECORDS</strong> — Performance tracking and archival</p>
             </div>
 
-            <h3>3. Role Hierarchy System</h3>
-            <p>Established a comprehensive 20+ role structure covering leadership, staff, community tiers, and
-                functional roles:</p>
+            <h3>Structural Evidence: Permission-Based Role Hierarchy</h3>
+            <p>The 20+ role structure was engineered to enable granular channel permissions across leadership, staff
+                operations, and community tiers:</p>
 
             <div style="margin: 2rem 0;">
                 <img src="../../assets/images/nova-roles-hierarchy.png"
                     alt="Nova Gaming Network complete role hierarchy"
                     style="width: 100%; border-radius: 8px; border: 1px solid var(--clr-border);">
-                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">20+ role structure
-                    from Founder to specialized positions like GFX Artist and Data Analyst</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--clr-text-muted);">Hierarchical role
+                    structure (Founder → Directors → Staff → Specialized positions: GFX Artist, Data Analyst, Host,
+                    Caster)
+                    establishes clear authority chains and enables role-specific channel access for operational
+                    efficiency.</p>
             </div>
 
             <p><strong>Role Categories:</strong></p>
