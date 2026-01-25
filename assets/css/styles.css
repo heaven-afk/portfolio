@@ -45,9 +45,9 @@
 
   /* Motion */
   --ease: cubic-bezier(.2, .8, .2, 1);
-  --t-fast: 200ms;
-  --t-med: 300ms;
-  --t-slow: 600ms;
+  --t-fast: 160ms;
+  --t-med: 260ms;
+  --t-slow: 520ms;
 }
 
 /* Optional: smoother font rendering */
@@ -55,6 +55,24 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+}
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 * {
@@ -974,6 +992,20 @@ img {
    Scroll reveal animations
    ========================= */
 
+/* Base reveal state */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--t-med) var(--ease),
+    transform var(--t-med) var(--ease);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for grid items */
 .reveal[data-delay="100"] {
   transition-delay: 100ms;
 }
@@ -1001,6 +1033,155 @@ img {
   .btn {
     transition: none !important;
   }
+}
+
+/* =========================
+   Navigation Scroll State
+   ========================= */
+
+.nav--scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom-color: var(--border-2);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   Link Animations
+   ========================= */
+
+/* Animated underline for text links */
+a.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+a.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  right: 50%;
+  height: 1px;
+  background: var(--accent);
+  transition: left var(--t-med) var(--ease),
+    right var(--t-med) var(--ease);
+}
+
+a.link-underline:hover::after {
+  left: 0;
+  right: 0;
+}
+
+/* =========================
+   Refined Card Hovers
+   ========================= */
+
+/* Specific card types */
+.highlight-card,
+.case-study-card,
+.stat-card {
+  transition: transform var(--t-fast) var(--ease),
+    box-shadow var(--t-fast) var(--ease),
+    border-color var(--t-fast) var(--ease);
+}
+
+.highlight-card:hover,
+.case-study-card:hover,
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+  border-color: var(--accent-border);
+}
+
+/* =========================
+   Media Hover Effects
+   ========================= */
+
+/* Only apply to content images,not icons */
+.section img,
+.case-study img,
+article img {
+  cursor: zoom-in;
+  transition: transform var(--t-med) var(--ease),
+    box-shadow var(--t-med) var(--ease);
+}
+
+.section img:hover,
+.case-study img:hover,
+article img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   Hero Entrance Animation
+   ========================= */
+
+.hero-title,
+.hero-subtitle,
+.hero-actions {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.hero-title.enter,
+.hero-subtitle.enter,
+.hero-actions.enter {
+  animation: fadeInUp 0.6s var(--ease) forwards;
+}
+
+.hero-title.enter {
+  animation-delay: 0ms;
+}
+
+.hero-subtitle.enter {
+  animation-delay: 120ms;
+}
+
+.hero-actions.enter {
+  animation-delay: 240ms;
+}
+
+/* =========================
+   Back to Top Button
+   ========================= */
+
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity var(--t-med) var(--ease),
+    transform var(--t-med) var(--ease),
+    background var(--t-fast) var(--ease);
+  z-index: 1000;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#back-to-top:hover {
+  background: var(--accent-2);
+  transform: translateY(-2px);
+}
+
+#back-to-top:active {
+  transform: translateY(0);
 }
 
 /* =========================

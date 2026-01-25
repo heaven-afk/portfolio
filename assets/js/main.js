@@ -180,6 +180,97 @@
   });
 
   // ==========================================
+  // Prefers Reduced Motion Check
+  // ==========================================
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ==========================================
+  // Navigation Scroll State
+  // ==========================================
+  const nav = document.querySelector('.nav');
+  if (nav && !prefersReducedMotion) {
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > 50) {
+        nav.classList.add('nav--scrolled');
+      } else {
+        nav.classList.remove('nav--scrolled');
+      }
+
+      lastScroll = currentScroll;
+    }, { passive: true });
+  }
+
+  // ==========================================
+  // Hero Entrance Animation
+  // ==========================================
+  if (!prefersReducedMotion) {
+    window.addEventListener('load', () => {
+      const heroTitle = document.querySelector('.hero-title');
+      const heroSubtitle = document.querySelector('.hero-subtitle');
+      const heroActions = document.querySelector('.hero-actions');
+
+      // Only animate if these elements exist (homepage)
+      if (heroTitle) {
+        setTimeout(() => heroTitle.classList.add('enter'), 50);
+      }
+      if (heroSubtitle) {
+        setTimeout(() => heroSubtitle.classList.add('enter'), 50);
+      }
+      if (heroActions) {
+        setTimeout(() => heroActions.classList.add('enter'), 50);
+      }
+    });
+  }
+
+  // ==========================================
+  // Back to Top Button
+  // ==========================================
+  const backToTopBtn = document.getElementById('back-to-top');
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      const scrollPercent = (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+      if (scrollPercent > 35) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // ==========================================
+  // Enhanced Scroll Reveal with Stagger
+  // ==========================================
+  const applyStaggerToGrids = () => {
+    const grids = document.querySelectorAll('.grid');
+
+    grids.forEach(grid => {
+      const revealChildren = grid.querySelectorAll('.reveal');
+      revealChildren.forEach((child, index) => {
+        // Apply stagger delays: 60ms, 120ms, 180ms, 240ms, etc.
+        const delay = (index * 60) + 100;
+        child.setAttribute('data-delay', delay.toString());
+      });
+    });
+  };
+
+  // Apply stagger before reveal observer runs
+  if (!prefersReducedMotion) {
+    applyStaggerToGrids();
+  }
+
+  // ==========================================
   // Initialize All Animations
   // ==========================================
   document.addEventListener('DOMContentLoaded', () => {
