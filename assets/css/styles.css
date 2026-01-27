@@ -288,6 +288,36 @@ a:focus-visible {
   border-radius: 4px;
 }
 
+/* Text Link with Animated Underline */
+.text-link {
+  position: relative;
+  display: inline-block;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.text-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background: var(--accent);
+  transition: all var(--dur-fast) var(--ease-out);
+  border-radius: 2px;
+}
+
+.text-link:hover::after {
+  left: 0;
+  right: 0;
+}
+
+.text-link:hover {
+  color: var(--accent-hover);
+}
+
+
 /* ==========================================================================
      LAYOUT UTILITIES
      ========================================================================== */
@@ -568,6 +598,72 @@ a:focus-visible {
 }
 
 /* ==========================================================================
+   SKILLS SECTION
+   ========================================================================== */
+
+#skills {
+  background: #f8fafc;
+  /* Slate 50 - light mode */
+}
+
+[data-theme="dark"] #skills {
+  background: #0f172a;
+  /* Slate 900 - dark mode */
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-group {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: all var(--dur-med) var(--ease-out);
+}
+
+.skill-group:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-light);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-item {
+  padding: 0.5rem 0;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.skill-item::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ==========================================================================
      SCROLL REVEAL ANIMATIONS (Existing System Refined)
      ========================================================================== */
 
@@ -697,7 +793,19 @@ a:focus-visible {
     transform: none !important;
     filter: none !important;
   }
+
+  /* Disable hover transforms while keeping functional states */
+  .btn:hover,
+  .card:hover,
+  .highlight-card:hover,
+  .stat-card:hover,
+  #back-to-top:hover,
+  .evidence-img:hover,
+  .case-study-img:hover {
+    transform: none !important;
+  }
 }
+
 
 /* ==========================================================================
      DATA VIZ & CHARTS
@@ -749,4 +857,36 @@ a:focus-visible {
 #back-to-top:hover {
   transform: translateY(-4px);
   background: var(--accent-hover);
+}
+
+/* ==========================================================================
+   IMAGE & VIDEO HOVER EFFECTS
+   ========================================================================== */
+
+.evidence-img,
+.case-study-img,
+figure img,
+.media-container img,
+.media-container video {
+  transition: all var(--dur-med) var(--ease-out);
+  border-radius: var(--radius-md);
+  display: block;
+  width: 100%;
+}
+
+.evidence-img:hover,
+.case-study-img:hover,
+figure:hover img,
+.media-container:hover img,
+.media-container:hover video {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Ensure images in cards don't overflow on scale */
+.card figure,
+.evidence-card figure,
+.media-container {
+  overflow: hidden;
+  border-radius: var(--radius-md);
 }
