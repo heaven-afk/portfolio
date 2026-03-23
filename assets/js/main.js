@@ -13,68 +13,10 @@
   'use strict';
 
   // ==========================================
-  // Dark Mode System (Injected)
+  // Dark Mode System (Refactored)
   // ==========================================
-  const initTheme = () => {
-    const htmlEl = document.documentElement;
-    const storedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    // Apply saved or system preference
-    if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
-      htmlEl.setAttribute('data-theme', 'dark');
-    }
-
-    // Create and Inject Toggle Button
-    const injectToggle = () => {
-      // Find the main container (nav-inner)
-      const navInner = document.querySelector('.nav-inner');
-      if (!navInner) return;
-
-      // Prevent duplicate injection
-      if (document.querySelector('.theme-toggle')) return;
-
-      const btn = document.createElement('button');
-      btn.className = 'theme-toggle';
-      btn.setAttribute('aria-label', 'Toggle Dark Mode');
-      btn.innerHTML = `
-        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-      `;
-
-      btn.addEventListener('click', () => {
-        const currentTheme = htmlEl.getAttribute('data-theme');
-        if (currentTheme === 'dark') {
-          htmlEl.removeAttribute('data-theme');
-          localStorage.setItem('theme', 'light');
-        } else {
-          htmlEl.setAttribute('data-theme', 'dark');
-          localStorage.setItem('theme', 'dark');
-        }
-      });
-
-      // Insert logic:
-      // Mobile: Insert before the hamburger menu (.nav-toggle) so it's [Brand] [Theme] [Hamburger]
-      // Desktop: It will just be in the flex container
-      const navToggle = navInner.querySelector('.nav-toggle');
-      if (navToggle && getComputedStyle(navToggle).display !== 'none') {
-        // If nav toggle exists (mobile view potentially), insert before it
-        navInner.insertBefore(btn, navToggle);
-      } else {
-        // Otherwise append to end (Desktop standard)
-        navInner.appendChild(btn);
-      }
-    };
-
-    // Run injection
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', injectToggle);
-    } else {
-      injectToggle();
-    }
-  };
-
-  initTheme();
+  // The system is now enforced as a dark tech theme via CSS :root variables.
+  // Theme toggle has been removed to maintain the Discord-inspired branding.
 
   // Check Reduced Motion Preference
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
